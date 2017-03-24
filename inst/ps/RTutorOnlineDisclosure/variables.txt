@@ -1,0 +1,69 @@
+orgvar | var | descr
+
+maker | maker | Contains the name of the car's manufacturer 
+membersince | membersince | The date, the ebay account was created 
+text | text | text size in bytes
+interior | interior | interior colour of the car
+n | n | The number of unique bidders in an specific auction
+numbids | numbids | Number of bids
+name | name | The title of the auction
+itemnum | itemnum | Item Number of the listing
+vin | vin | Vehicle identification number
+sellername | sellername | Ebay alias of the seller
+enddate| enddate | Date and time, the listing ended
+startdate | startdate | Date and time, the listing started
+exterior | exterior | Exterior colour of the car
+location | location | Location of the car 
+inspection | inspection | Factor variable: 0 if the car hasn't been inspected, 1 otherwise
+question | questions | Factor variable: 1 if there have been questions regarding the listing, 0 otherwise
+relist | relist | Factor variable: 1 if the car has been relisted, 0 otherwise
+miles | miles | Total miles on the odometer 
+featured | featured | Factor variable: 1 if the listing was featured by eBay, 0 otherwise
+bookvalue | bookvalue | Bookvalue of the car
+phone | phone | Factor variable: 1 if there was a phone number provided by the seller, 0 otherwise
+address | address | Factor variable: 1 if the address of the seller was provided, 0 otherwise
+pwrseller | pwrseller | Factor variable: 1 if the seller was a power seller, 0 otherwise
+reserve | reserve | Factor variable: 1 if the seller set a reserve, 0 otherwise
+buyitnow | buyitnow | Factor variable: 1 if the listing contained a buy-it-now offer, 0 otherwise
+sellfdbackpct | sellfdback | seller feedback [error in the orig. dataset]
+photos | photos | Number of photos provided in the listing
+addedinfo | addedinfo | Factor variable: 1 if the seller added information during the listing
+year | year | Year the car was produced
+options | options | Number of additional features: air-conditiong, radio, ...
+pctfdback | pctfdback | Percentage of positive feedback for the seller
+startbid | startbid | Starting bid of the auction
+descriptionsize | descriptionsize | Size of the descriptionsize
+biddy1 | biddy1 | Winning bid of the auction, this bid is usually the 2nd highest bid plus a minimal markup
+biddy2 | biddy2 | Second highest bid
+biddy3 | biddy3 | Third highest bid
+scratch | scratch | Factor variable: 1 if the listing contains the wort 'scratches', 0 otherwise
+dent | dent | Factor variable: 1 if the listing contains the wort 'dent', 0 otherwise
+rust | rust | Factor variable: 1 if the listing contains the wort 'rust', 0 otherwise
+doors | doors | Number of doors
+trans | trans | The kind of transmission: 'Automatic' or 'Manual'
+condition | condition | Condition of the car, in our dataset they are all 'used' cars
+model | model | Carmodel of the manufacturer
+cyl | cyl | I.e. six-cylinder, ...
+length | length | Length of the auction
+endsunday | endsunday | Factor variable: 1 if the auction ended on a sunday, 0 otherwise
+warranty | warranty | Factor variable: 1 if the car is under warranty, 0 otherwise
+age | age | Age of the car
+week | week | Week of the year
+sell | sell | Factor variable: 1 if the car has been sold during the auction, 0 otherwise
+software | software | Which software has been used to create the listing
+totallisted | totallisted | Number of cars previously listed by the seller during the sample period
+totalsold | totalsold | Number of cars previously sold by the seller during the sample period
+dealer | dealer | Factor variable: 1 if the seller is considered to be a dealer, meaning he sold more than one car
+dent_negation | dent_negation | Factor variable: 1 if the seller negated any dents, 0 otherwise
+rust_negation | rust_negation | Factor variable: 1 if the seller negated any rust, 0 otherwise
+sellerage | sellerage | Duration of eBay membership in years
+scratch_negation | scratch_negation | Factor variable: 1 if the seller negated any scratches, 0 otherwise
+scratch_group | scratch_group | Factor variable: 0 if the word 'scratch' wasn't mentioned in the description, 1 if the seller negated any occurence of scratches, 2 if scratches were mentioned positively qualified: i.e. 'there are little to no scratches', 3 if scratches were mentioned unqualified: i.e. 'there are scratches', 4 if scratches were mentioned negatively qualified: i.e. 'there are a lot of scratches'
+rust_group | rust_group | Factor variable: 0 if the word 'rust' wasn't mentioned in the description, 1 if the seller negated any occurence of rust, 2 if rust was mentioned positively qualified: i.e. 'there is little to no rust', 3 if rust was mentioned unqualified: i.e. 'there is rust', 4 if rust was mentioned negatively qualified: i.e. 'there is a lot of rust'
+dent_group | dent_group | Factor variable: 0 if the word 'dent' wasn't mentioned in the description, 1 if the seller negated any occurence of dents, 2 if dents were mentioned positively qualified: i.e. 'there are little to no dents', 3 if dents were mentioned unqualified: i.e. 'there are dents', 4 if dents were mentioned negatively qualified: i.e. 'there are a lot of dents'
+negpct | negpct | Seller's total negative percentage
+collectible | collectible | Factor variable: 1 if the car is a collectible car, 0 otherwise. Collectible is defined by the author as being produced before 1980
+pro | pro | Factor variable: Describes the software used for creating the listing: 1 - carad, 2 - auction123, 3 - eBizAutos, 0 - otherwise
+minbid | minbid | Quotient of startbid/bookvalue
+carmodel | carmodel | Factor variable for the different carmodels
+group | group | Factor variable for the different groups of cars, defined by the author: 1 - reliable, 2 - pickup, 3 - classic

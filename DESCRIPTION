@@ -1,0 +1,12 @@
+Package: RTutorOnlineDisclosure
+Type: Package
+Title: RTutor problem set RTutorOnlineDisclosure
+Version: 0.1
+Date: 2017-24-03
+Author: Patrick Rotter
+Maintainer: Patrick Rotter <rotterpatrick@gmail.com>
+Description: RTutor problem set RTutorOnlineDisclosure
+License:
+	Problem set content: Creative Commons (CC BY-SA)
+	Package code: GPL >= 2.0
+Depends: RTutor, ggplot2, devtools, foreign, gridExtra, dplyr, dplyrExtras, data.table, lfe, stargazer, regtools, svgdiagram, fitdistrplus, logspline
