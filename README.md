@@ -1,7 +1,7 @@
 This package constitutes an interactive R problem set based on the RTutor package (https://github.com/skranz/RTutor).
 
 This problem set analyses information asymmetries between a seller and a possible bidder in used good auctions. It sheds some light upon how to prevent this by disclosing as much information as possible online. The entire problem set is developed from the paper **"Asymmetric Information, Adverse Selection and Online Disclosure:
-The Case of eBay Motors"**, written by Gregory Lewis, published in 2011 in the American Economic Review 101(4). You may download the paper from <a href="https://www.aeaweb.org/articles?id=10.1257/aer.101.4.1535" target = "_blank"> aeaweb.org/articles?id=10.1257/aer.101.4.1535</a> to get more detailed information. On the same webpage, the whole dataset utilized for the initial analysis in the paper, as well as the Stata Code are provided aswell. This problem set uses a condense version of the original data, which may be downloaded here: <a href="www.https://github.com/rotterp" target = "_blank"> github.com/rotterp </a>
+The Case of eBay Motors"**, written by Gregory Lewis, published in 2011 in the American Economic Review 101(4). You may download the paper from <a href="https://www.aeaweb.org/articles?id=10.1257/aer.101.4.1535" target = "_blank"> aeaweb.org/articles?id=10.1257/aer.101.4.1535</a> to get more detailed information. On the same webpage, the whole dataset utilized for the initial analysis in the paper, as well as the Stata Code are provided aswell. This problem set uses a condensed version of the original data, which may be downloaded here: <a href="https://github.com/rotterp/RTutorOnlineDisclosure" target = "_blank"> github.com/rotterp/RTutorOnlineDisclosure </a>
 
 
 ## 1. Installation
