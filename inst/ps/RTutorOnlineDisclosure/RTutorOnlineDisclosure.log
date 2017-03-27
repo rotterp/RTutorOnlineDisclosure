@@ -1,0 +1,20 @@
+{"type":["init_ps"],"time":["2017-03-27 17:59:34"],"user":["Seb"],"umph":[1490630374.8346],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-27 18:14:26"],"user":["Seb"],"umph":[1490631266.2989],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-27 18:20:11"],"user":["Seb"],"umph":[1490631611.3735],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-27 18:23:53"],"user":["Seb"],"umph":[1490631833.6277],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-27 19:18:26"],"user":["Seb"],"umph":[1490635106.9432],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2017-03-27 19:21:59"],"user":["Seb"],"umph":[1490635319.3185],"ok":[false],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-27 19:22:05"],"user":["Seb"],"umph":[1490635325.5734],"ok":[false],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-27 19:22:06"],"user":["Seb"],"umph":[1490635326.7643],"ok":[false],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-27 19:22:08"],"user":["Seb"],"umph":[1490635328.8484],"ok":[false],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-27 19:22:10"],"user":["Seb"],"umph":[1490635330.8626],"ok":[false],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+,
