@@ -18,3 +18,21 @@
 ,
 {"type":["check_chunk"],"time":["2017-03-27 19:22:10"],"user":["Seb"],"umph":[1490635330.8626],"ok":[false],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
 ,
+{"type":["init_ps"],"time":["2017-03-28 22:44:07"],"user":["Seb"],"umph":[1490733847.4735],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 22:44:54"],"user":["Seb"],"umph":[1490733894.8464],"ok":[false],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 22:45:01"],"user":["Seb"],"umph":[1490733901.5598],"ok":[false],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 22:45:09"],"user":["Seb"],"umph":[1490733909.1327],"ok":[false],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 22:45:11"],"user":["Seb"],"umph":[1490733911.1313],"ok":[false],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+,
+{"type":["init_ps"],"time":["2017-03-28 22:49:54"],"user":["Seb"],"umph":[1490734194.7742],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 22:50:08"],"user":["Seb"],"umph":[1490734208.3272],"ok":[false],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 22:50:10"],"user":["Seb"],"umph":[1490734210.6813],"ok":[false],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 22:50:12"],"user":["Seb"],"umph":[1490734212.5262],"ok":[false],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+,
