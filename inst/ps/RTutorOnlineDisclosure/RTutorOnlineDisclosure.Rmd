@@ -18,7 +18,7 @@ check.problem.set('RTutorOnlineDisclosure', ps.dir, ps.file, user.name=user.name
 This problem set analyses information asymmetries between a sellers and possible bidders in used good auctions. It sheds some light upon how to prevent information asymmetries by disclosing as much information as possible online. The entire problem set is developed from the paper **"Asymmetric Information, Adverse Selection and Online Disclosure:
 The Case of eBay Motors"**, written by Gregory Lewis, published in 2011 in the American Economic Review 101(4). You may download the paper from <a href="https://www.aeaweb.org/articles?id=10.1257/aer.101.4.1535" target = "_blank"> aeaweb.org/articles?id=10.1257/aer.101.4.1535</a> to get more detailed information. On the same webpage, the whole dataset utilized for the initial analysis in the paper, as well as the Stata Code are provided. This problem set uses a condensed version of the original data, which may be downloaded here: <a href="https://github.com/rotterp/RTutorOnlineDisclosure" target = "_blank"> github.com/rotterp/RTutorOnlineDisclosure </a>
 
-Concerning the problemset, there is no need for solving the exercises in a given order. Yet I highly advise you to do so, as exercises become more tricky and challenging or may expect some previously gained knowledge in order to solve them. A plethora of tasks will already be solved to circumvent repetitive assignments. Also keep in mind, that you'll definitely won't need any R knowledge at all, although some basic statistics software or programming knowledge may be of advantage.  
+Concerning the problem set, there is no need for solving the exercises in a given order. Yet I highly advise you to do so, as exercises become trickier and challenging or may expect some previously gained knowledge to solve them. A plethora of tasks will already be solved to circumvent repetitive assignments. Also, keep in mind, that you won't need any R knowledge at all, although some basic statistics software or programming knowledge may be of advantage.  
 
 
 ## Exercise Content
@@ -33,7 +33,7 @@ Concerning the problemset, there is no need for solving the exercises in a given
 
   3B. Hedonic Regressions B
 
-4. Endogeniety
+4. Endogeneity
 
 5. Online Disclosure and its Costs
 
@@ -51,23 +51,23 @@ Concerning the problemset, there is no need for solving the exercises in a given
 
 ## Exercise 1 -- Overview 
 
-This problemset analyses the effect of asymmetric information, adverse selection and online disclosure in the automobile market. Therefore online auctions hosted by eBay Motors back in the time the largest market place for second-hand cars in the US were analyzed. It is puzzling, that the whole business seemed to run well and thus one could probably assume, that information asymmetries had little to no effect on the trading volume. Even though we probably would have suspected them to do so, as there was no way to inspect the good pre-buying. The latter sentence is perfectly resembling the findings of Akerlof (1970) and his so-called 'Lemons problem'. Akerlof stated two possible outcomes in the event of a seller having better information about the quality of her product sold than a hypothetical buyer: firstly, if the asymmetry prevails high quality cars won't be sold anymore and the volume of transactions will drop below the social optimum. Secondly the inefficeny has to vanish, e.g. a third-party could intervene and guarantee for quality with a certificate. Bond (1982) tested Akerlof's findings with used and new trucks. He found, that by controlling for age and mileage on maintenance, there seemed to be no difference between used and new trucks sold. Thus his findings showed no support for Akerlof's first statement. Yet his results could support Akerlof's second thesis, meaning that either there was another institution involved, or the information asymmetry was eliminated otherwise.
-The paper of Gregory Lewis tries to shed light on the fact, why obvious information asymmtries - concerning for example the condition of the car, which can only be judged ex post - seem to be neglectably small. To show this, the paper utilizes the amount of `photos` posted by the seller as a proxy of quality and information. Videlicet due to describing the cars condition very diligently in the listing via text and the usage of certain key phrases, like `rust`, `dents` or `scratches`, the information asymmetry vanishes. If the latter plays indeed a role, disclosing information online is almost as good as inspecting the car personally and the overall good performance of the automobile market can be explained, the author argues.
+This problem set analyses the effect of asymmetric information, adverse selection and online disclosure in the automobile market. Therefore, online auctions hosted by eBay Motors back in the time the largest market place for second-hand cars in the US were analysed. It is puzzling, that the whole business seemed to run well and thus one could probably assume, that information asymmetries had little to no effect on the trading volume. Even though we probably would have suspected them to do so, as there was no way to inspect the good pre-buying. The latter sentence is perfectly resembling the findings of Akerlof (1970) and his so-called 'Lemons problem'. Akerlof stated two possible outcomes in the event of a seller having better information about the quality of her product sold than a hypothetical buyer: firstly, if the asymmetry prevails high quality cars won't be sold anymore and the volume of transactions will drop below the social optimum. Secondly the inefficiency must vanish, e.g. a third-party could intervene and guarantee for quality with a certificate. Bond (1982) tested Akerlof's findings with used and new trucks. He found, that by controlling for age and mileage on maintenance, there seemed to be no difference between used and new trucks sold. Thus, his findings showed no support for Akerlof's first statement. Yet his results could support Akerlof's second thesis, meaning that either there was another institution involved, or the information asymmetry was eliminated otherwise.
+The paper of Gregory Lewis tries to shed light on the fact, why obvious information asymmetries - concerning for example the condition of the car, which can only be judged ex post - seem to be neglectable small. To show this, the paper utilizes the amount of `photos` posted by the seller as a proxy of quality and information. Videlicet due to describing the cars condition very diligently in the listing via text and the usage of certain key phrases, like `rust`, `dents` or `scratches`, the information asymmetry vanishes. If the latter plays indeed a role, disclosing information online is almost as good as inspecting the car personally and the overall good performance of the automobile market can be explained, the author argues.
 
-Moreover, it is also quite easy to auction off cars on eBay Motors, as listings are easily created and only a small fee is taken by eBay. This makes auctioning off cars on eBay Motors very convenient, as all a possible seller has to do is enlist his car. He doesn't need to show somebody around or even worry about his car being properly advertised. Furthermore, creating a nice auction can also be easily simplified by using third-party `software` applications like "carad", "auction123" or "eBizAutos". Other than that, you are also free to create your own template of choice. Even though creating a custom template is more time consuming, chances are high, it is also more rewarding in return. 
-As disclosing your private information as a seller seems to be a huge aspect and eBay let's you do so by providing `photos` or text describing the condition of your car for a minimum fee, We will also try to elaborate on disclosing costs. Especially, whether they play a role when listing cars. Nevertheless, for now we assume that, if a seller describes his car as precisely as possible information asymmetries should be neglectably small. Thus they do not intervene with the final result of the auction. Yet this means contracts have to be valid and disclosure costs should be appropiate, otherwise the market won't be efficient. Both of the latter conditions hold true, as there is little to no difference entering a contract online or personally and an additional `photo` cost approximately US\$ $0.15$.
+Moreover, it is also quite easy to auction off cars on eBay Motors, as listings are easily created and only a small fee is taken by eBay. This makes auctioning off cars on eBay Motors very convenient, as all a possible seller must do is enlist his car. He doesn't need to show somebody around or even worry about his car being properly advertised. Furthermore, creating a nice auction can also be easily simplified by using third-party `software` applications like "carad", "auction123" or "eBizAutos". Other than that, you are also free to create your own template of choice. Even though creating a custom template is more time consuming, chances are high, it is also more rewarding in return. 
+As disclosing your private information as a seller seems to be a huge aspect and eBay lets you do so by providing `photos` or text describing the condition of your car for a minimum fee, we will also try to elaborate on disclosing costs. Especially, whether they play a role when listing cars. Nevertheless, for now we assume that, if a seller describes his car as precisely as possible information asymmetries should be neglectable small. Thus, they do not intervene with the result of the auction. Yet this means contracts have to be valid and disclosure costs should be appropriate, otherwise the market won't be efficient. Both latter conditions hold true, as there is little to no difference entering a contract online or personally and an additional `photo` cost approximately US\$ $0.15$.
 
-The results of the paper support the evidence, that `photos` provided by the seller appears to be significant covariates regarding the price and online disclosure indeed seems to have an effect on the degree of disclosure.  And thus on the auction price itself. We will elaborate on this in more detail in later exercises of this problemset.
+The results of the paper support the evidence, that `photos` provided by the seller appears to be significant covariates regarding the price and online disclosure indeed seems to influence the degree of disclosure.  And thus, on the auction price itself. We will elaborate on this in more detail in later exercises of this problem set.
 
-Let's first dig into our dataset. We will be utilizing the same data for the entirety of this problemset. The data `cleanedebay.Rds` is just an extract of the original data used by the author of the paper. Yet it comprises all variables needed. In fact, the data holds $67$ variables and $106,559$ observations of finished second-hand car auctions from March to October 2006. Before we can work on it, we have to load the data into our environment. If you are completely new to either programming or statistical `software`, feel free to always refer to the info boxes, which contain step-by-step instructions on analyzing our data. In addition, you may always consult the `hint` button inside a task for further tips and tricks. If however, you seem to be unable to solve a given task, just refer to the `solution` button, which will present you the code needed to solve the task. Whenever you're done with a given task procced with `check`.
+Let's first dig into our dataset. We will be utilizing the same data for the entirety of this problem set. The data `cleanedebay.Rds` is just an extract of the original data used by the author of the paper. Yet it comprises all variables needed. In fact, the data holds $67$ variables and $106,559$ observations of finished second-hand car auctions from March to October 2006. Before we can work on it, we have to load the data into our environment. If you are completely new to either programming or statistical `software`, feel free to always refer to the info boxes, which contain step-by-step instructions on analysing our data. In addition, you may always consult the `hint` button inside a task for further tips and tricks. If, however, you seem to be unable to solve a given task, just refer to the `solution` button, which will present you the code needed to solve the task. Whenever you're done with a given task procced with `check`.
 
 info("readRDS()") # Run this line (Strg-Enter) to show info
 
 To get you started, the first task will be rather simple. Please proceed with `edit` and then enter your code.
 
-**Task:** Use the function `readRDS()` to read in the downloaded data set `cleanedebay.Rds`. After having read in the file, we want to assign the latter function to the variable `data`. To check whether you did everyhting right, proceed with `check`.  
+**Task:** Use the function `readRDS()` to read in the downloaded data set `cleanedebay.Rds`. After having read in the file, we want to assign the latter function to the variable `data`. To check whether you did everything right, proceed with `check`.  
 
-For any further advice, press the `hint` button. This will provide you with either additional information about your given task, or parts of the solution. If however, you seem to be unable to solve the task with the provided information, proceed with `solution`. This will paste the solution code in your command line. You may then confirm with `check`.
+For any further advice, press the `hint` button. This will provide you with either additional information about your given task, or parts of the solution. If, however, you seem to be unable to solve the task with the provided information, proceed with `solution`. This will paste the solution code in your command line. You may then confirm with `check`.
 
 ```{r "1__2"}
 # Enter your Code below
@@ -75,9 +75,9 @@ For any further advice, press the `hint` button. This will provide you with eith
 ```
 
 
-We have now successfully loaded the data from our flat file to R and can start working with it. This exercise will focus on showing you how to operate on the data.frame `data`, aswell as which variables `data` contains. This is a pure introduction with a little twist in the end, showing you that not everything is as obvious as it might seem at first glance. The ultimate goal for this exercise is to acquaint yourself with the dataset and not analyzing it. We shift the analyzing and deducing part to the following exercises.
+We have now successfully loaded the data from our flat file to R and can start working with it. This exercise will focus on showing you how to operate on the data.frame `data`, as well as which variables `data` contains. This is a pure introduction with a little twist in the end, showing you that not everything is as obvious as it might seem at first glance. The goal for this exercise is to acquaint yourself with the dataset and not analysing it. We shift the analysing and deducing part to the following exercises.
 
-Let's take a look at the basic structure. In our dataset a row corresponds to a single auction, while each column corresponds to a variable for this specific auction. Our variables are containing relevant information like our winning bid, the total amout of bids, the `carmodel` and so on. To get an overview of all variables we utilize a function called `glimpse()` from the dplyr package. Packages are mostly user contributed content, with useful functions.
+Let's look at the basic structure. In our dataset, a row corresponds to a single auction, while each column corresponds to a variable for this specific auction. Our variables are containing relevant information like our winning bid, the total number of bids, the `carmodel` and so on. To get an overview of all variables we utilize a function called `glimpse()` from the dplyr package. Packages are mostly user contributed content, with useful functions.
 
 info("glimpse()") # Run this line (Strg-Enter) to show info
 
@@ -87,14 +87,14 @@ info("glimpse()") # Run this line (Strg-Enter) to show info
 # Enter your Code here
 ```
 
-This is quite a nice and convenient way, to acquaint yourself with the dataset `data` at hand. As we already know, the dataset contains a total of $106,559$ auctions and $67$ variables. Lets have a look at our first variable `membersince`. Next to the name of the variable, there is a `<fctr>` statement. This means our variable `membersince` was erroneously interpreted as a factor variable. Factor variables are categorical variables which hold limited values for example 1-3, while each value corresponds to another distinct meaning. We can easily conclude though, that a date format seems more appropiate for this variable. So you could correct this by referring `as.Date(data$membersince, format = "%b-%d-%y")` if you're within the US or Great Britain to adapt the data type. Yet this is not important for this problemset and therefore completely optional. There are other variables of interest we want to get to know right away though:
+This is quite a nice and convenient way, to acquaint yourself with the dataset `data` at hand. As we already know, the dataset contains a total of $106,559$ auctions and $67$ variables. Let's have a look at our first variable `membersince`. Next to the name of the variable, there is a `<fctr>` statement. This means our variable `membersince` was erroneously interpreted as a factor variable. Factor variables are categorical variables which hold limited values for example 1-3, while each value corresponds to another distinct meaning. We can easily conclude though, that a date format seems more appropriate for this variable. So you could correct this by referring `as.Date(data$membersince, format = "%b-%d-%y")` if you're within the US or Great Britain to adapt the data type. Yet this is not important for this problem set and therefore completely optional. There are other variables of interest we want to get to know right away though:
 
-Some of the more important variables are part of this table, yet there are many other self explaining variables like trans, model, bookvalue and so on, which we will be utilizing at later stages of this problem set.
+Some of the more important variables are part of this table, yet there are many other self-explaining variables like `trans`,`model`, `bookvalue` and so on, which we will be utilizing at later stages of this problem set.
   
 <head>
 <style>
 table {
-    font-family: Helvetica;
+    font-family: Cambria;
     border-collapse: collapse;
     width: 100%;
 }
@@ -102,7 +102,7 @@ table {
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
-    padding: 8px;
+    padding: 12px;
 }
 
 tr:nth-child(even) {
@@ -119,50 +119,50 @@ tr:nth-child(even) {
   </tr>
   <tr>
     <td>n</td>
-    <td>Total amount of unique bidders.</td>
+    <td>Total number of unique bidders. </td>
   </tr>
     <tr>
     <td>numbids</td>
-    <td>Total amount of bids.</td>
+    <td>Total number of bids. </td>
   </tr>
   <tr>
     <td>photos</td>
-    <td>Total amount of photos</td>
+    <td>Total number of photos</td>
   </tr>
   <tr>
     <td>software</td>
-    <td>Corresponds to the software utilizied to create the listing. For example 'ebayhosting' means, that no third-party application was used.</td>
+    <td>Corresponds to the software utilized to create the listing. For example 'ebayhosting' means, that no third-party application was used. </td>
   </tr>
   <tr>
     <td>biddyX</td>
-    <td>Total bid amount in US$ in descending order, which means that biddy1 eqauls the highest bid of the auction.</td>
+    <td>Total bid amount in US$ in descending order, which means that biddy1 equals the highest bid of the auction. </td>
   </tr>
   <tr>
     <td>relist</td>
-    <td>Factor variable, which takes either '1' or '0' as a value. A value of '1' corresonds to the car being relisted at least once, while a '0' signals, that it is the first attempt to sell the car</td>
+    <td>Factor variable, which takes either '1' or '0' as a value. A value of '1' corresponds to the car being relisted at least once, while a '0' signals, that it is the first attempt to sell the car</td>
   </tr>
 </table>
 
 </body>
 
 
-Other than this table, you may have a look at the whole dataset in table format at any point of time, if you click on `data`, or change the actual tab from `1` to `Data Explorer`. You will soon notice though, that as our dataset comprises $67$ variables and $106,559$ observations, the `glimpse()` function in the latter exercise provides a very good overview already. Nevertheless, any datasets and subsets of data, which we are going to use for the remainder of the problemset can be accessed by the `Data Explorer`. So don't hestitate to take a look there once in a while. 
+Other than this table, you may have a look at the whole dataset in table format at any point of time, if you click on `data`, or change the actual tab from `1` to `Data Explorer`. You will soon notice though, that as our dataset comprises $67$ variables and $106,559$ observations, the `glimpse()` function in the latter exercise provides a very good overview already. Nevertheless, any datasets and subsets of data, which we are going to use for the remainder of the problem set can be accessed by the `Data Explorer`. So, don't hesitate to look there occasionally. 
 If you are uncertain about a variable's meaning, you may also consult the `Data Explorer`: if you hover over a column name, a tooltip with additional information about the respective variable will be shown.
 
-Now let's dig deeper into `data`. For subsetting our dataset of any kind we're going to stick to the `dplyr` package, which is very convenient to work with. For `dplyr` starters take a look at the info box below, which explains in detail how to subset our data.frame `data`. 
+Now let's dig deeper into `data`. For sub setting our dataset of any kind we're going to stick to the `dplyr` package, which is very convenient to work with. For `dplyr` starters take a look at the info box below, which explains in detail how to subset our data.frame `data`. 
 
 
 info("dplyr") # Run this line (Strg-Enter) to show info
 
-In the following tasks we are going to have a closer look at certain excerpt of our data. In fact we want to know more about Honda Civics fulfilling certain conditions. This will make you familiar with `dplyr`, so you can do the data manipulation part on your own from exercise 2 on. Furthermore we want to have a look at the relation of our winning bid, the amount of `photos` and the overall condition of the Civic and see if we can already deduce something. 
+In the following tasks, we are going to have a closer look at certain excerpt of our data. In fact, we want to know more about Honda Civics fulfilling certain conditions. This will make you familiar with `dplyr`, so you can do the data manipulation part on your own from exercise 2 on. Furthermore, we want to have a look at the relation of our winning bid, the amount of `photos` and the overall condition of the Civic and see if we can already deduce something. 
 
-**Task:** Subset `data` to match the following criteria: The model we are looking for is a Honda Civic, built between 2000 and 2002. All cars matching the previous condition were sold on first attempt. Furthermore the odometer holds between $30.000$ and $35.000$ `miles` and the seller posted `photos`. To make it easier, parts of the code are already given. 
+**Task:** Subset `data` to match the following criteria: The model we are looking for is a Honda Civic, built between 2000 and 2002. All cars matching the previous condition were sold on first attempt. Furthermore, the odometer holds between $30.000$ and $35.000$ `miles` and the seller posted `photos`. To make it easier, parts of the code are already given. 
 
 ```{r "1__9"}
 filter(data, model == "Civic" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)
 ```
 
-These are still quite a few of observations, and due to the many variables, there is still not much information gained. Lets try to narrow our observations down further, by selecting only certain variables. Keep in mind, `dent_group`, `scratch_group`, aswell as `rust_group` are categorical variables based on dummy variables from the original mined data. You can read more about this topic in the paper itself. Following values are possible:
+These are still quite a few of observations, and due to the many variables, there is still not much information gained. Let's try to narrow our observations down further, by selecting only certain variables. Keep in mind, `dent_group`, `scratch_group`, as well as `rust_group` are categorical variables based on dummy variables from the original mined data. You can read more about this topic in the paper itself. Following values are possible:
 
 <head>
 <style>
@@ -222,13 +222,13 @@ tr:nth-child(even) {
 
 The other groups behave accordingly to the explanation above.
 
-**Task:** Select all of the following columns from `data`: `dent_group`, `scratch_group`, `rust_group`, aswell as `biddy1`, which equals the highest bid, `photos`, `model`, `year`, `miles`, `age`, `text` and `n`. `n` ist the total amount of bidders, who participated in the auction.
+**Task:** Select all of the following columns from `data`: `dent_group`, `scratch_group`, `rust_group`, as well as `biddy1`, which equals the highest bid, `photos`, `model`, `year`, `miles`, `age`, `text` and `n`. `n` is the total number of bidders, who participated in the auction.
 
 ```{r "1__10"}
 # Enter your code here
 ```
 
-Did you notice the difference between this and the previous task? This time, we are back to using our complete dataset `data`, with only a handful of variables we are interested in, but other than recently we didn't use any conditions on our auctions to narrow down our results. Thus we get `model`, `year`, `miles`, `age`, `text` and `n`, aswell as the groups for every single auction. To put it in other words, it is still not really clearly structured, as we either have too many variables at hand, or too many observations. To tackle this problem, let's now put both those statements together and extend the syntax a little bit, by grouping and ordering our results. This will return a small table containing interesting information.
+Did you notice the difference between this and the previous task? This time, we are back to using our complete dataset `data`, with only a handful of variables we are interested in, but other than recently we didn't use any conditions on our auctions to narrow down our results. Thus, we get `model`, `year`, `miles`, `age`, `text` and `n`, as well as the groups for every single auction. To put it in other words, it is still not clearly structured, as we either have too many variables at hand, or too many observations. To tackle this problem, let's now put both those statements together and extend the syntax a little bit, by grouping and ordering our results. This will return a small table containing interesting information.
 
 **Task:** Using the results of the previous two tasks, we now want to extend the code further. Please extend the `select()` and `filter()` statements from previously to order our resulting table descending by `biddy1`, which again equals the highest bid. 
 
@@ -240,7 +240,7 @@ data %>%
 ```
 
 
-Let's first summarise our results: we are looking for Honda Civics, built between 2000 and 2002, with $30,000$ to $35,000$ miles on the odometer. All of these cars have to be sold on first attempt, which is a possible proxy for filtering out any effects of possible buyers bidding in multiple auctions. If we take a closer look at our resulting table, first off, we can identify, that for this subset of our dataset, neither `dents`, nor scrapes and the occurence of `rust` seem to have an influence on the highest bid, as all groups have a value of $0$. We remember though, that the paper suggested `photos` as a way of measuring the amount of online disclosure. All cars should be virtually identical in their condition, as the deviation in `age` and `miles` is minimal in this scenario. Nevertheless, the amount of bidders could also play a role and indeed, the range of bidders from auction to auction is quite different. If we compare auction 4 with auction 3 the amount of `photos` and the total `miles` is almost identical, yet in auction 4 only a single bidder took part, while on the other hand in auction 3 a total of 7 unique bidders took part in the auction. We will examine the amount of bidders as a possible reason to explain for a higher prise at a later stage in this problemset in more detail. For now let's come back to our `photos`, if we compare auction 1 to auction 5, the winning bid in auction 5 with US\$ $7800$ is much lower than the US\$ $9100$. Comparing only those two auctions, the difference in `photos` posted by the seller is quite striking, so we could assume that `photos` indeed play a huge role in explaining the difference in the winning bid aswell. Keep in mind, each respective car should be homogenous, as it differs just slightly in its `age` and `miles`. This leads us to our final task of this exercise, or rather first quiz of our problemset. 
+Let's first summarise our results: we are looking for Honda Civics, built between 2000 and 2002, with $30,000$ to $35,000$ miles on the odometer. These cars must be sold on first attempt, which is a possible proxy for filtering out any effects of possible buyers bidding in multiple auctions. If we take a closer look at our resulting table, first off, we can identify, that for this subset of our dataset, neither `dents`, nor scrapes and the occurrence of `rust` seem to have an influence on the highest bid, as all groups have a value of $0$. We remember though, that the paper suggested `photos` as a way of measuring the amount of online disclosure. All cars should be virtually identical in their condition, as the deviation in `age` and `miles` is minimal in this scenario. Nevertheless, the number of bidders could also play a role and indeed, the range of bidders from auction to auction is quite different. If we compare auction 4 with auction 3 the amount of `photos` and the total `miles` is almost identical, yet in auction 4 only a single bidder took part, while on the other hand in auction 3 a total of 7 unique bidders took part in the auction. We will examine the number of bidders as a possible reason to explain for a higher price at a later stage in this problem set in more detail. For now, let's come back to our `photos`, if we compare auction 1 to auction 5, the winning bid in auction 5 with US\$ $7800$ is much lower than the US\$ $9100$. Comparing only those two auctions, the difference in `photos` posted by the seller is quite striking, so we could assume that `photos` indeed play a huge role in explaining the difference in the winning bid as well. Keep in mind, each respective car should be homogenous, as it differs just slightly in its `age` and `miles`. This leads us to our final task of this exercise, or rather first quiz of our problem set. 
 
 #! addon__quiz__Understanding your data A
 
@@ -250,7 +250,7 @@ Let's first summarise our results: we are looking for Honda Civics, built betwee
   
 # Summary
   
-We cannot yet deduce from our table above, that `photos` seem to have a significant effect on the amount our bidders are willing to pay, the sample size is just too small and the data was gained by filtering very strictly for a good example. Even though it doesn't support our hypothesis from the overview. It is also very important to note, that it doesn't decline it either. And indeed there seems to be a link between the amount of `photos` posted by the seller and the highest bid. Yet this could also be due to higher participation in this auction, or other omitted variables and thus endogeniety. We will have a look on regression prerequisites and answering the latter questions in the following exercises. 
+We cannot yet deduce from our table above, that `photos` seem to have a significant effect on the amount our bidders are willing to pay, the sample size is just too small and the data was gained by filtering very strictly for a good example. Even though it doesn't support our hypothesis from the overview. It is also very important to note, that it doesn't decline it either. And indeed, there seems to be a link between the amount of `photos` posted by the seller and the highest bid. Yet this could also be due to higher participation in this auction, or other omitted variables and thus endogeneity. We will have a look on regression prerequisites and answering the latter questions in the following exercises. 
 
 ## Exercise 2 -- Descriptive statistics
 
@@ -262,9 +262,9 @@ Please proceed with `edit` and immediately `check` afterwards to proceed with th
 data = readRDS("cleanedebay.Rds")
 ```
 
-Before introducing the hedonic regression model and starting with the regressions, we want to first gain some more information about the cars being auctioned off on eBay Motors. The final result of this exercise will resemble a table from the paper which will give some nice insights into the overall condition of the cars for the whole sample, aswell as possible differences between private sellers and professional dealers. Moreover during this exercise you will acquaint yourself with most of the needed variables for our future regressions, which makes summary statistics a perfect start for understanding the underlying data.
+Before introducing the hedonic regression model and starting with the regressions, we want to first gain some more information about the cars being auctioned off on eBay Motors. The result of this exercise will resemble a table from the paper which will give some nice insights into the overall condition of the cars for the whole sample, as well as possible differences between private sellers and professional dealers. Moreover, during this exercise, you will acquaint yourself with most of the needed variables for our future regressions, which makes summary statistics a perfect start for understanding the underlying data.
 
-To skip repetative tasks without gaining further knowledge, the second exercise has been solved already. We want to drop most of our unnecessary variables at this point and store our resulting ones in a data.frame to the variable `dat`. Operating on subsets of `data` will speed up the processing and calculating part in R by quite a margin, as we drop unnecessary variables. In further exercises we will also learn new ways to do this, e.g. we can use `felm()` to subset `data` in accordance to our analysis.
+To skip repetitive tasks without gaining further knowledge, the second exercise has been solved already. We want to drop most of our unnecessary variables at this point and store our resulting ones in a data.frame to the variable `dat`. Operating on subsets of `data` will speed up the processing and calculating part in R by quite a margin, as we drop unnecessary variables. In further exercises we will also learn new ways to do this, e.g. we can use `felm()` to subset `data` in accordance to our analysis.
 
 **Task:** Following code will restrict our data stored in the variable `dat` to the important variables for this exercise. Please confirm with `check` to solve this and proceed with the next task.
 
@@ -272,18 +272,18 @@ To skip repetative tasks without gaining further knowledge, the second exercise 
 dat <- select(data, dealer, miles, age, trans, warranty, options, photos, relist, sellfdback, negpct, minbid, posbid, sell, biddy1, rust, rust_negation, scratch, scratch_negation, dent, dent_negation)
 ```
 
-The variable `dat` holds the same amount of auctions as `data` from the previous exercise, yet we do not have all of our $67$ variables anymore, instead we are going to stick to just $20$ variables. This will speed up plotting our data aswell as making it easier to calculate summary statistics, as we do not want to calculate summary statistics for each variable in `cleanedebay.TXT`. To get you started, the first exercise is again rather easy and introduces you to some additional basic R functions. Let's start with the function `mean()`. To learn more about `mean()`, please check the info box below.
+The variable `dat` holds the same number of auctions as `data` from the previous exercise, yet we do not have all our $67$ variables anymore, instead we are going to stick to just $20$ variables. This will speed up plotting our data as well as making it easier to calculate summary statistics, as we do not want to calculate summary statistics for each variable in `cleanedebay.TXT`. To get you started, the first exercise is again rather easy and introduces you to some additional basic R functions. Let's start with the function `mean()`. To learn more about `mean()`, please check the info box below.
 
 info("mean()") # Run this line (Strg-Enter) to show info
 
-**Task:** Refering to `dat` as our new underlying dataset, calculate the mean of `sell`. 
+**Task:** Referring to `dat` as our new underlying dataset, calculate the mean of `sell`. 
 
 ```{r "2__4"}
 # Add your code below
 ```
 
-Our result of the previous task is $0.2842463$, but how do we interpret this? If you have taken a close look at the variable `sell` during the first exercise, you will have noticed, that `sell` takes only two different values, $0$ and $1$. Thus the `mean()` function calculates a percentage in favor of $1$. This means, over all values of `sell`, we currently have ~$28.4\%$ chance of `sell` being $1$. This only works though, as R interpretes the data type of our variable `sell` in our Rds file `cleanedebay.Rds`. You may verify this, either through the usage of the function `class()` or you can look the variable `sell` up, after having used `glimpse()`. Due to being an `integer`, R recognizes the values as being numeric and calculates a mean. If `sell` was set as a `factor` instead, R would not do this. 
-Remember, the variable `sell` holds the information if the car has been sold in this auction, a value of $1$ corresponds to the car having been sold, a value of $0$ corresponds to an unsuccessful auction. Hence, if we know, how both of these values are distributed, the mean equals the percentage, how many cars actually have been sold.
+Our result of the previous task is $0.2842463$, but how do we interpret this? If you have taken a close look at the variable `sell` during the first exercise, you will have noticed, that `sell` takes only two different values, $0$ and $1$. Thus the `mean()` function calculates a percentage in favour of $1$. This means, over all values of `sell`, we currently have ~$28.4\%$ chance of `sell` being $1$. This only works though, as R interprets the data type of our variable `sell` in our Rds file `cleanedebay.Rds`. You may verify this, either through the usage of the function `class()` or you can look the variable `sell` up, after having used `glimpse()`. Due to being an `integer`, R recognizes the values as being numeric and calculates a mean. If `sell` was set as a `factor` instead, R would not do this. 
+Remember, the variable `sell` holds the information if the car has been sold in this auction, a value of $1$ corresponds to the car having been sold, a value of $0$ corresponds to an unsuccessful auction. Hence, if we know, how both values are distributed, the mean equals the percentage, how many cars have been sold.
 
 First, let's verify that our result is indeed correct and `sell` is indeed a integer, using another R base function. 
 
@@ -298,7 +298,7 @@ We see, there are indeed just two values the variable `sell` takes. Let's now tr
 #! addon__quiz__basic statistical knowledge
 
 
-It is quite striking, that most auctions seem to not payoff for the seller, so one could assume as our sample is limited in time, there might be a lot of relisted cars in our sample, but in fact only about $22.6\%$ of the cars are being relisted, and this value is not yet adjusted for multiple relistings. Thus the data is very small and no analysis was conducted to find out, whether changes of the latter might result in a car being sold. 
+It is quite striking, that most auctions seem to not payoff for the seller, so one could assume as our sample is limited in time, there might be a lot of relisted cars in our sample, but in fact only about $22.6\%$ of the cars are being relisted, and this value is not yet adjusted for multiple relisting. Thus, the data is very small and no analysis was conducted to find out, whether changes of the latter might result in a car being sold. 
 Let's now proceed with gaining some more information about our data, without referring to multiple `mean()` functions. There are quite a lot of possibilities to choose from, yet to show our result in a nicely formatted table, we want to make use of the package `stargazer`. As data explorers are lazy, I provided you with a function called `tab.summary()`. Check the info box below, which will introduce you to `stargazer`. Afterwards there are more tasks, to get to know the data.
 
 info("stargazer()") # Run this line (Strg-Enter) to show info
@@ -312,14 +312,14 @@ Let's now put our newly gained knowledge to the test.
 tab.summary(dat)
 ```
 
-Let's summarise our findings as following: the average car's odometer posts about $90,180$ `miles`, which is equivalent to approximately $145,130$ kilometres. Cars futhermore are on average around $16$ years old and only $19\%$ are still under `warranty` Furthermore, on average there are around $17$ `photos` complementing the listing. The variable `minbid` means that the minimum bid is around $52\%$ of the book value and for $85\%$ of all cars, there was at least one bidder taking part in the auction. The variables `rust`, `scratch` and `dent` mean that, for example in $19\%$ of all our listings the phrase `rust` was used and in more than half of these cases, any appearance of `rust` was negated by the seller.
+Let's summarise our findings as following: the average car's odometer posts about $90,180$ `miles`, which is equivalent to approximately $145,130$ kilometres. Cars furthermore are on average around $16$ years old and only $19\%$ are still under `warranty` Furthermore, on average there are around $17$ `photos` complementing the listing. The variable `minbid` means that the minimum bid is around $52\%$ of the book value and for $85\%$ of all cars, there was at least one bidder taking part in the auction. The variables `rust`, `scratch` and `dent` mean that, for example in $19\%$ of all our listings the phrase `rust` was used and in more than half of these cases, any appearance of `rust` was negated by the seller.
 
 #! addon__quiz__Quick check
   
   
-This quiz was a little bit challenging. Nevertheless, it is important for you to understand. From the latter statistic alone, we cannot tell, how our cars' overall conditions really look like, as we would have to look at the `rust_group`, `dent_group` and `scratch_group` variables instead. For the moment we can only identify positive mentions, but not how bad the dents actually are. It could just be a very minor dent for example. We will have a closer look at this in a later exercise, where we are going to interpret with the help of our predefined groups. 
+This quiz was a little bit challenging. Nevertheless, it is important for you to understand. From the latter statistic alone, we cannot tell, how our cars' overall conditions look like, as we would have to look at the `rust_group`, `dent_group` and `scratch_group` variables instead. For the moment, we can only identify positive mentions, but not how bad the dents are. It could just be a very minor dent for example. We will have a closer look at this in a later exercise, where we are going to interpret with the help of our predefined groups. 
 
-Let's now divide our dataset in private sellers and dealers and take a look if there are obvious changes regarding the cars' conditions.
+Let's now divide our dataset in private sellers and dealers and look if there are obvious changes regarding the cars' conditions.
 
 **Task:** Please adapt the code, with your previous knowledge of the first exercise in a way that as a result we have a single table, displaying the same statistics for professional dealers and private sellers separately.
 
@@ -327,7 +327,7 @@ Let's now divide our dataset in private sellers and dealers and take a look if t
 # tab.summary()
 ```
 
-The interpretation is identical to before, most noticeably, private sellers seem to offer older cars, which also results in more `miles` Furthermore if a car is being auctioned off by a private seller, the car is less likely to be under `warranty` and the amount of `photos` provided by private parties is also significantly smaller. Yet there are so many factors coming into play, that we cannot distinguish for now, which ones are more important to us than others. In the next exercise we are going to estimate which variables account for changes in our winning bid `biddy1`, which is our most important goal for this problemset. 
+The interpretation is identical to before, most noticeably, private sellers seem to offer older cars, which also results in more `miles` Furthermore if a car is being auctioned off by a private seller, the car is less likely to be under `warranty` and the amount of `photos` provided by private parties is also significantly smaller. Yet there are so many factors coming into play, that we cannot distinguish for now, which ones are more important to us than others. In the next exercise, we are going to estimate which variables account for changes in our winning bid `biddy1`, which is our most important goal for this problem set. 
 
 To foster your understanding of this exercise let's calculate some easy maths.
 
@@ -335,10 +335,10 @@ To foster your understanding of this exercise let's calculate some easy maths.
 
 
 
-To finish this exercise we want to visually analyze our core issues, before we head into our regression model. To do so, let's recap our results shortly. We will use a vector of possible covariates to explain our winning bid `biddy1`. In the following exercise we will have a look at two of them, namely `miles` and `photos`. While only `photos` will foster our understanding of our core issue regarding online disclosure and information asymmetry, it's nice to see as a comparsion how the total amount of `miles` influences our winning bid. It is only natural to assume, that a high amount of `miles` will lower the return of the seller, but how does the amount of information disclosed influence the latter?
+To finish this exercise, we want to visually analyse our core issues, before we head into our regression model. To do so, let's recap our results shortly. We will use a vector of possible covariates to explain our winning bid `biddy1`. In the following exercise, we will have a look at two of them, namely `miles` and `photos`. While only `photos` will foster our understanding of our core issue regarding online disclosure and information asymmetry, it's nice to see as a comparison how the total amount of `miles` influences our winning bid. It is only natural to assume, that a high amount of `miles` will lower the return of the seller, but how does the amount of information disclosed influence the latter?
 
 **Task:** The solution is already given to you. Please proceed with `edit` and immediately `check` afterwards. Even though the following code chunk is quite long, it should also be fairly easy to read and understand. We are going to create a new variable called `mgroup` which groups our `miles` in intervals. This is easily done with the help of the `cut()` function.  
-We repeat this step for our `photos` and afterwards we create two plots, both having our logarithmed winning bid `biddy1` on the ordinate axis and `miles` and `photos` respectively on the abscissa.
+We repeat this step for our `photos` and afterwards we create two plots, both having our logarithmic winning bid `biddy1` on the ordinate axis and `miles` and `photos` respectively on the abscissa.
 
 ```{r "2__11"}
 dat$mgroup <- cut(dat$miles, 
@@ -366,12 +366,12 @@ ggplot(dat, aes(mgroup, log(biddy1))) +
   theme(legend.position = "none", axis.text.x = element_text(size  = 10, angle = 45, hjust = 1, vjust = 1)) 
 ```
 
-We see that `miles` behave as expected, the more `miles`, the lower the winning bid becomes, yet it is easy to spot, that there is quite some noise to this, as vehicles with a really high mileage - to be more exact in our case more than $350,000$ `miles` - are sold at exceptionally high price. This is largely due to a very big outlier and the amount of `collectible` cars in this group.
+We see that `miles` behave as expected, the more `miles`, the lower the winning bid becomes, yet it is easy to spot, that there is quite some noise to this, as vehicles with a high mileage - to be more exact in our case more than $350,000$ `miles` - are sold at exceptionally high price. This is largely due to a very big outlier and the amount of `collectible` cars in this group.
 
 **Task:** The solution is already given to you. Please proceed with `edit` and immediately `check` afterwards. The following code will create the second plot, showing how our winning bid behaves conforming to our `photo` intervals. Remember the intervals are increasing in steps of five.
 
 ```{r "2__13"}
-ggplot(dat2, aes(pgroup, log(biddy1))) +
+ggplot(dat, aes(pgroup, log(biddy1))) +
   geom_bar(aes(fill = as.factor(pgroup)), position = "dodge", stat="identity") +
   labs(title = "Plotting winning bid on photos") + 
   labs(x = "photos", y = expression("log " * biddy[1])) +
@@ -389,7 +389,7 @@ Aside from that, it's difficult to pinpoint what exactly drives our price for no
 
 ## Exercise 3 -- Hedonic regression model
 
-Before heading further into the analysis of our data, let's first take a look at our literature. The paper is based in parts on Milgrom (1981) aswell as Grossman and Hart (1980). In these papers they deduct a disclosure model in which it's always best to fully disclose all possible information. As lacking information should be treated negatively. This indeed makes sense, as if there is no information provided by the seller in the listing, a possible buyer will probably neglect to bid. This is caused by the lack of information available in regards to the car's condition, which is being sold. Due to this one-way information asymmetry for the bidder, he will completely abandon the auction, or lower his own maximum bid amount. Another possible solution to this, would be a scenario, in which a possible bidder asks questions and therefore forces the seller to disclose more information about certain topics, he didn't disclose in the first place. Keep in mind, all information provided by the seller may be seen as part of the contract. If the car violates its description, the bidder might resign from the contract. 
+Before heading further into the analysis of our data, let's first look at our literature. The paper is based in parts on Milgrom (1981) as well as Grossman and Hart (1980). In these papers, they deduct a disclosure model in which it's always best to fully disclose all possible information. As lacking information, should be treated negatively. This indeed makes sense, as if there is no information provided by the seller in the listing, a possible buyer will probably neglect to bid. This is caused by the lack of information available in regards to the car's condition, which is being sold. Due to this one-way information asymmetry for the bidder, he will completely abandon the auction, or lower his own maximum bid amount. Another possible solution to this, would be a scenario, in which a possible bidder asks questions and therefore forces the seller to disclose more information about certain topics, he didn't disclose in the first place. Keep in mind, all information provided by the seller may be regarded as part of the contract. If the car violates its description, the bidder might resign from the contract. 
 
 We therefore follow their model and suggest the seller to disclose all information and thus no information asymmetry should prevail.
 
@@ -401,7 +401,7 @@ $$x_t \textrm{ is a vector with the cars characteristics from the listing}$$
 
 $$\beta \textrm{ is the coefficient of regression}$$
 
-$$t \textrm{ is a single auciton}$$
+$$t \textrm{ is a single auction}$$
 
 $$\epsilon_t \textrm{ is the error term}$$
 
@@ -424,7 +424,7 @@ Next we want to fit our variables to a linear model and start with our regressio
 
 ## Exercise 3A -- Hedonic Regressions 
 
-We introduced our hedonic regression model in exercise 3, yet for your convenience, I'll provide it in this exercise aswell.
+We introduced our hedonic regression model in exercise 3, yet for your convenience, I'll provide it in this exercise as well.
 
 $$log(biddy_1) = x_t \cdot \beta + \varepsilon_t$$
   
@@ -438,13 +438,13 @@ negpct
 \end{pmatrix} \cdot \beta + \varepsilon$$
 
 
-Before we start with our regressions, please have a look at the info box below for further technical prerequisites in regards to performing linear fixed effects regression in R. To observe fixed effects we are following in parts Arellano (2004), which is a good guide, when working with panel data in econometrics. 
+Before we start with our regressions, please have a look at the info box below for further technical prerequisites in regards to performing linear fixed effects regression in R. To observe fixed effects, we are following in parts Arellano (2004), which is a good guide, when working with panel data in econometrics. 
 
 info("felm() - part 1") # Run this line (Strg-Enter) to show info
 
 info("I()") # Run this line (Strg-Enter) to show info
 
-At this point we encounter the same situation as previously. We have to load our dataset `cleanedebay.TXT` first. As this task is identical to the previous ones, the solution is already given to you.
+At this point we encounter the same situation as previously. We must load our dataset `cleanedebay.TXT` first. As this task is identical to the previous ones, the solution is already given to you.
 
 **Task:** The following chunk of code resembles the `readRDS()` statement from exercise 1 and is already stated. Please proceed with `edit` and immediately `check` afterwards to solve the next task.
 
@@ -452,9 +452,9 @@ At this point we encounter the same situation as previously. We have to load our
 data = readRDS("cleanedebay.Rds")
 ```
 
-You are now ready to work with the `felm()` function on your own. Please proceed to conduct your first regression of this problemset.
+You are now ready to work with the `felm()` function on your own. Please proceed to conduct your first regression of this problem set.
 
-**Task:** Using a call to the function `felm()` perform a simple linear regression. As this will be the first regression of this problemset, parts of the code are provided. Please use the previously defined vector `x_t` as your covariates. This means you have to use the following variables: `miles`, `photos`, $photos^2$, `options`, `negpct` and `sellfdback`. Keep in mind, you might have to apply a logarithm for some of the variables and/or make use of the `I()` function. 
+**Task:** Using a call to the function `felm()` perform a simple linear regression. As this will be the first regression of this problem set, parts of the code are provided. Please use the previously defined vector `x_t` as your covariates. This means you must use the following variables: `miles`, `photos`, $photos^2$, `options`, `negpct` and `sellfdback`. Keep in mind, you might have to apply a logarithm for some of the variables and/or make use of the `I()` function. 
 
 ```{r "3A__5"}
 # Adapt and uncomment the code below
@@ -462,12 +462,12 @@ You are now ready to work with the `felm()` function on your own. Please proceed
 ```
 
   
-Let's have a quick look at our results: this first regression is still not completely modeled since we only want to get a feeling for the hedonic regression modell. If we take a look at our covariates though, it is easily to spot, that our logratihmed `miles` seem to be the strongest coefficient. The magnitude of the coefficient and the negative sign imply the following: the more `miles` the car has on the odometer, the lower the price. This result fosters the intuition that miles are probably the first and most important thing a possible buyer has a look at, when deciding upon buying a car.
+Let's have a quick look at our results: this first regression is still not completely modelled since we only want to get a feeling for the hedonic regression model. If we look at our covariates though, it is easily to spot, that our logarithmic `miles` seem to be the strongest coefficient. The magnitude of the coefficient and the negative sign imply the following: the more `miles` the car has on the odometer, the lower the price. This result fosters the intuition that miles are probably the first and most important thing a possible buyer has a look at, when deciding upon buying a car.
 
 
 #! addon__quiz__Interpreting regression results 1
 
-We would expect any negative feedback a seller has received in earlier auctions to be a somewhat negative indicator concerning this seller. Thus a possible bidder limits his bids, to avoid additional risk. To put this in an economic context: the seller probably auctioned off goods before and trivialised the poor condition his good was in, to jack up the price. 
+We would expect any negative feedback a seller has received in earlier auctions to be a somewhat negative indicator concerning this seller. Thus, a possible bidder limits his bids, to avoid additional risk. To put this in an economic context: the seller probably auctioned off goods before and trivialised the poor condition his good was in, to jack up the price. 
 
 
 As for now, our results are only digits and it may still be somewhat troubling to identify the link between our winning bid `biddy1` and our covariates, we want to show them graphically.
@@ -486,9 +486,9 @@ ggplot(logdata, aes(miles, felm(log(biddy1)~log(miles) + photos + I(photos^2/100
   theme(legend.position = "none", axis.text.x = element_text(size  = 10, angle = 45, hjust = 1, vjust = 1))
 ```
 
-We can see that there seems to be no signficant over- or underestimation. In fact our data is pretty good distributed, if we consider, that we expect less bids for absurd high amounts of `miles` on the odometer. Nevertheless, we are able to get an even smoother result, if we account for fixed effects. This means, there are variables, which are not yet part of our regression, indicating a over- or underestimation. To segregate them from our error term, we use a fixed effects regression where the fixed effect is within a specific `carmodel`, `year` and `week`. We will do this in conjunction with clustered standard errors to arrive at our final version of our base model.
+We can see that there seems to be no significant over- or underestimation. In fact, our data is well distributed, if we consider, that we expect less bids for absurd high amounts of `miles` on the odometer. Nevertheless, we can get an even smoother result, if we account for fixed effects. This means, there are variables, which are not yet part of our regression, indicating an over- or underestimation. To segregate them from our error term, we use a fixed effects regression where the fixed effect is within a specific `carmodel`, `year` and `week`. We will do this in conjunction with clustered standard errors to arrive at our final version of our base model.
 
-**Task:** Extend the previous regression with our fixed effects, defined in task 4. It is basically the same formula as previously, yet the results are different, as we are going to project out Fixed Effets for `carmodel`, `year` and `week`. Assign the result to a variable called `rega`.
+**Task:** Extend the previous regression with our fixed effects, defined in task 4. It is basically the same formula as previously, yet the results are different, as we are going to project out fixed effects for `carmodel`, `year` and `week`. Assign the result to a variable called `rega`.
 
 ```{r "3A__7"}
 # Add your code below
@@ -499,16 +499,16 @@ Now there is only one additional adjustment needed, before we achieve our base m
 
 #! addon__quiz__Estimating regression results 1
 
-**Task:** The following task will store the base model to a variable called `reg1` and compare the resulting standard erros from the clustered and non-clustered version of the base model. Just proceed with `check`, as the solution is already given to you.
+**Task:** The following task will store the base model to a variable called `reg1` and compare the resulting standard errors from the clustered and non-clustered version of the base model. Just proceed with `check`, as the solution is already given to you.
 
 ```{r "3A__8"}
-# Proceed with check to take a look out regression results.
+# Proceed with check to look out regression results.
 reg1 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week | 0 | sellername, data = data)
 
 se.summary(rega$se, reg1$cse)
 ```
 
-We may conclude, that for the clustered version, standard errors seem to be much higher than for the non-clustered one. But what's the reasoning behind? There could be heteroskedasticity in our regression model, which means the variance of our error term $\epsilon_t$ is not constant. Yet we can not directly observe our error term $\epsilon_t$, as this is the idiosyncratic taste of a bidder. Nevertheless, assuming heteroskedasticity is indeed a valid assumption, as a professional dealer is very likely to sell akin cars: if he has lots of expertise selling caravans, he most likely will not sell a muscle car all of a sudden, as he doesn't know this business very well. Heteroskedasticity thus will cause inconsistent standard errors. To tackle the latter problem we clustered our standard errors by `sellername`, which concerning our data set, is the unique alias of the persona selling the car. A broader spectrum of heteroskedasticity is covered in <a href="https://www3.nd.edu/~rwilliam/stats2/l25.pdf" target = "_blank"> Williams, Richard (2015)</a>.
+We may conclude, that for the clustered version, standard errors seem to be much higher than for the non-clustered one. But what's the reasoning behind? There could be heteroskedasticity in our regression model, which means the variance of our error term $\epsilon_t$ is not constant. Yet we cannot directly observe our error term $\epsilon_t$, as this is the idiosyncratic taste of a bidder. Nevertheless, assuming heteroskedasticity is indeed a valid assumption, as a professional dealer is very likely to sell akin cars: if he has lots of expertise selling caravans, he most likely will not sell a muscle car all of a sudden, as he doesn't know this business very well. Heteroskedasticity thus will cause inconsistent standard errors. To tackle the latter problem, we clustered our standard errors by `sellername`, which concerning our data set, is the unique alias of the persona selling the car. A broader spectrum of heteroskedasticity is covered in <a href="https://www3.nd.edu/~rwilliam/stats2/l25.pdf" target = "_blank"> Williams, Richard (2015)</a>.
 
 **Task:** Let's now take a closer look at our regression results of our final base model, stored in the variable `reg1`. To do this, we apply the function `summary()`. Just proceed with `check`.
 
@@ -520,20 +520,20 @@ Before interpreting our results, let's quickly recall our model as following:
 
 $$log(p_t) = x_t * \beta + \epsilon_t$$
   
-We want to regress the logarithmed value of our winning bid `biddy1` on as-is, aswell as on logarithmed values. This means our interpretation is somewhat different regarding which covariate we consider. Albeit the interpretation differs from logarithmed to non-logarithmed variables, both have one thing in common: we will always interpret our results under a ceteris paribus assumption, which means, we pick one variable of the right-hand side to explain the change in our winning bid `biddy1`, whilst holding each other covariates constant.
-For example an increase of miles by $1\%$ - remember miles is a logarithmed value: `log(miles)` - causes our winning bid to decrease by $0.13\%$. This means, we can read our values as-is and the coefficient of $-0.1302630$ may be interpreted as elasticity. 
-This leads us to our non-logarithmed variables. These have to be interpreted differently, as we have to calculate our percentage. To do this, we insert our coefficient in this formula: $([exp(coefficient)-1]*100)\%$. Choosing `photos` for example, will yield a interpretation like this: posting a single additional photo, results in an increase of the winning bid by around $([exp(0.0197524)-1]*100)\% = approx. 2\%$. 
+We want to regress the logarithmic value of our winning bid `biddy1` on as-is, as well as on logarithmic values. This means our interpretation is somewhat different regarding which covariate we consider. Albeit the interpretation differs from logarithmic to non-logarithmic variables, both have one thing in common: we will always interpret our results under a ceteris paribus assumption, which means, we pick one variable of the right-hand side to explain the change in our winning bid `biddy1`, whilst holding each other covariates constant.
+For example, an increase of miles by $1\%$ - remember miles is a logarithmic value: `log(miles)` - causes our winning bid to decrease by $0.13\%$. This means, we can read our values as-is and the coefficient of $-0.1302630$ may be interpreted as elasticity. 
+This leads us to our non-logarithmic variables. These must be interpreted differently, as we have to calculate our percentage. To do this, we insert our coefficient in this formula: $([exp(coefficient)-1]*100)\%$. Choosing `photos` for example, will yield an interpretation like this: posting a single additional photo, results in an increase of the winning bid by around $([exp(0.0197524)-1]*100)\% = approx. 2\%$. 
 
 #! addon__quiz__Interpreting statistical results
 
   
-Let's now focus on our other hedonic regressions in part B, which will include a view on our fixed effects, aswell as a summary for the whole exercise. 
+Let's now focus on our other hedonic regressions in part B, which will include a view on our fixed effects, as well as a summary for the whole exercise. 
 
 ## Exercise 3B -- Hedonic Regressions
 
 As already stated, in part B of exercise 3 we are going to focus on additional hedonic regressions. Each regression will always resemble our base model, as we are just going to adapt our previous version introduced in part A. We will conduct a total of 5 additional regressions, most of them make up a new task, yet also concerning future regressions, some tasks may contain multiple regressions, as some changes are very minor. 
 
-Analogous to previously, we are interested in the relationship of our logarithmed winning bid `biddy1` and our current proxy of information disclosed by the seller `photos`. Here our our base model is given as a reminder:
+Analogous to previously, we are interested in the relationship of our logarithmic winning bid `biddy1` and our current proxy of information disclosed by the seller `photos`. Here our base model is given as a reminder:
 
 $$log(p_t) = log(biddy_1)$$
 
@@ -543,7 +543,7 @@ $$fixed\_effects = carmodel + year + week$$
 
 $$clustered\_se = sellername$$
 
-Before we can start, we again have to load our dataset `cleanedebay.TXT`. The task is identical to the previous ones, the solution is already given to you.
+Before we can start, we again must load our dataset `cleanedebay.TXT`. The task is identical to the previous ones; the solution is already given to you.
 
 **Task:** The following chunk of code resembles the `readRDS()` statement from exercise 1 and is already given. Please proceed with `edit` and immediately `check` afterwards to solve the next task.
 
@@ -570,11 +570,11 @@ Let's now have a look at our results from our previous regressions, including `r
 reg.summary1(reg1, reg2, reg3)
 ```
 
-What can be seen from the table above, is that all coefficients are highly significant and have mostly the expected sign. It is a little bit awkward, that the logarithmed feedback of the seller seems to have a negative impact, meaning the more feedback a seller received, the lower the price. There is no obvious explanation for this, yet it is reassuring that `negpct` still has a negative sign, as already discussed in the previous exercise.
+What can be seen from the table above, is that all coefficients are highly significant and have mostly the expected sign. It is a little bit awkward, that the logarithmic feedback of the seller seems to have a negative impact, meaning the more feedback a seller received, the lower the price. There is no obvious explanation for this, yet it is reassuring that `negpct` still has a negative sign, as already discussed in the previous exercise.
 
-Overall, considering the private sellers sample only, the coefficient of `photos` seems to be stronger compared to the dealer sample. As digits alone might be confusing, we want to visually represent our covariates of `reg1` with the help of a effectplot. 
+Overall, considering the private sellers sample only, the coefficient of `photos` seems to be stronger compared to the dealer sample. As digits alone might be confusing, we want to visually represent our covariates of `reg1` with the help of an effect plot. 
 
-**Task:** The following chunk shows a bar plot containing all our independant variables of `reg1` to illustrate their effect on `log(biddy1)`. We manipulated our regression results from `reg1`, as `effectplot()` doesn't support quadratic terms and logarithmed values natively. The solution is already given, just press `check` to proceed. 
+**Task:** The following chunk shows a bar plot containing all our independent variables of `reg1` to illustrate their effect on `log(biddy1)`. We manipulated our regression results from `reg1`, as `effectplot()` doesn't support quadratic terms and logarithmic values natively. The solution is already given, just press `check` to proceed. 
   
 ```{r "3B__4"}
 library(regtools)
@@ -593,9 +593,9 @@ effectplot(reg1_omit, ylab = expression("Effect on log " * biddy[1]), xlab = "Ex
 
 We see that, even though `log(miles)` account for the most variance in `log(biddy1)`, our proxy of online disclosure `photos` and `options` are also important for explaining variation in price. Furthermore, note the difference between our variables used in our regression. As we would expect both `photos` and `options` to be positive and thus reward the seller with a higher price. 
 
-To finish this exercise we want to conduct another three hedonic regressions, all of them being extensions of our base model. 
+To finish this exercise, we want to conduct another three hedonic regressions, all of them being extensions of our base model. 
 
-**Task:** Conduct our base model regression for the `collectible` sample only. To avoid repetative task, the solution is already given. Please proceed with `check`. 
+**Task:** Conduct our base model regression for the `collectible` sample only. To avoid repetitive task, the solution is already given. Please proceed with `check`. 
 
 ```{r "3B__5"}
 reg4 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week | 0 | sellername, data = data, subset = c(collectible==1))
@@ -604,21 +604,21 @@ reg4 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + neg
 summary(reg4)
 ```
 
-We see slight changes in our covariates for the `collectible` sample: all coefficents are still significant, yet the coefficient of `photos` reached its peak. It's also new, that the `options` variable seems to play a huge role compared to `miles` and `photos`. This is indeed very interesting as it suggests, that possible buyers for `collectible` cars are mostly interested in additonal features like air-conditiong and less interested in miles. While the latter seems perfectly fine, as a `collectible` car is unlikely to be actively driven anyway, the first one is quite puzzling. 
+We see slight changes in our covariates for the `collectible` sample: all coefficients are still significant, yet the coefficient of `photos` reached its peak. It's also new, that the `options` variable seems to play a huge role compared to `miles` and `photos`. This is indeed very interesting as it suggests, that possible buyers for `collectible` cars are mostly interested in additional features like air-condition and less interested in miles. While the latter seems perfectly fine, as a `collectible` car is unlikely to be actively driven anyway, the first one is quite puzzling. 
 
 #! addon__quiz__Possible reasons for strong options
 
 
 The last statement is in fact true, as the variation in `options` concerning collectible cars, is not as volatile as non-collectible cars. This could be due to the fact, that `options` are not a crucial part, when selling collector's item.
 
-Let's now proceed with implementing new covariate to extend our basic hedonic regression model. We want to implement our first control variable `bookvalue`. This is basically a new subsample of our dataset `data` with newer cars, where book value data was available. In the latter regression we observed the strongest relationship between `photos` and our logarithmed winning bid `biddy1`. This is mostly due to older cars being more homogenous, as newer cars have many different features to opt for. Following this what relationship would you expect for the `bookvalue` sample:
+Let's now proceed with implementing new covariate to extend our basic hedonic regression model. We want to implement our first control variable `bookvalue`. This is basically a new subsample of our dataset `data` with newer cars, where book value data was available. In the latter regression, we observed the strongest relationship between `photos` and our logarithmic winning bid `biddy1`. This is mostly due to older cars being more homogenous, as newer cars have many different features to opt for. Following this what relationship would you expect for the `bookvalue` sample:
 
 #! addon__quiz__The relation between biddy1 and photos becomes ...
 
 
 Knowing the solution, let's first perform our regression to validate and afterwards proceed with our economic reasoning.
 
-**Task:** The following chunk extends our base model regression and adds another covariate of the logarithmed book value. Furthermore the result of this regression is printed. The solution is already given to you. Please proceed with `check`. 
+**Task:** The following chunk extends our base model regression and adds another covariate of the logarithmic book value. Furthermore, the result of this regression is printed. The solution is already given to you. Please proceed with `check`. 
 
 ```{r "3B__6"}
 reg5 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) + log(bookvalue) | carmodel + year + week | 0 | sellername, data = data)
@@ -627,10 +627,10 @@ reg5 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + neg
 summary(reg5)
 ```
 
-And indeed as expected, the relationship between `photos` and `biddy1` is not as strong anymore. This is likely due to the cars being relatively new with less heterogeniety. On the other hand, the relationship between `biddy1` and `bookvalue` is really strong. This is expected, as the winning bid is somewhat tied to the bookvalue of a car. If there was a huge gap, one would either expect to only bid - given auctions are underpriced - in auctions, or not bid at all.
-Moreover we are going to utilize the book value sample to illustrate the extent of our fixed effects for different car models. Remember we deliberately projected out fixed effects for `carmodel`. `year` and `week`. We will see, that especially for the carmodel the fixed effect is quite large, thus we will only plot the `carmodel` fixed effects in task 7 of this exercise.
+And indeed as expected, the relationship between `photos` and `biddy1` is not as strong anymore. This is likely due to the cars being relatively new with less heterogeneity. On the other hand, the relationship between `biddy1` and `bookvalue` is strong. This is expected, as the winning bid is somewhat tied to the `bookvalue` of a car. If there was a huge gap, one would either expect to only bid - given auctions are underprized - in auctions, or not bid at all.
+Moreover we are going to utilize the book value sample to illustrate the extent of our fixed effects for different car models. Remember we deliberately projected out fixed effects for `carmodel`. `year` and `week`. We will see, that especially for the `carmodel` the fixed effect is quite large; thus, we will only plot the `carmodel` fixed effects in task 7 of this exercise.
 
-Our last regression for this exercise includes possible interactions between `age` and `warranty`. We already argued that photos seem to have a greater impact, the older a car becomes. One would also expect `photos` to have a lower impact for cars, which are still under warranty, as this will give the buyer some additonal insurance. Unfortunately there is no significant relation between the interaction of `photos` and `warranty`, which means we have no statistical support for this thesis. Nonetheless we want to take a quick look at this regression:
+Our last regression for this exercise includes possible interactions between `age` and `warranty`. We already argued that photos seem to have a greater impact, the older a car becomes. One would also expect `photos` to have a lower impact for cars, which are still under warranty, as this will give the buyer some additional insurance. Unfortunately, there is no significant relation between the interaction of `photos` and `warranty`, which means we have no statistical support for this thesis. Nonetheless we want to take a quick look at this regression:
 
 **Task:** Extend our base model regression for 3 new covariates: The multiplier of `age` and `photos`, the `warranty` and the multiplier of `warranty` and `photos`. Store the result of the function `felm()` to a variable called `reg6` and print it.
 
@@ -640,16 +640,16 @@ Our last regression for this exercise includes possible interactions between `ag
 
 Having a look at our results, we may conclude that there is indeed a significant interaction between `age` and `photos`, which supports our assumptions made in previous tasks.
 
-**Task:** To sum up all of our regressions, including `reg1` from part A of the exercise, we again utilize a wrapper function based on the `stargazer` package, to create a nicely formatted output table. The code is already provided, so you just need to proceed with `edit` and `check`. If you have a closer look at the code you will see that we use a wrapper function called `reg.summary2()`. If you want to have a look inside this function, check the `init.R` file in the problemset's folder.
+**Task:** To sum up all of our regressions, including `reg1` from part A of the exercise, we again utilize a wrapper function based on the `stargazer` package, to create a nicely formatted output table. The code is already provided, so you just need to proceed with `edit` and `check`. If you have a closer look at the code you will see that we use a wrapper function called `reg.summary2()`. If you want to have a look inside this function, check the `init.R` file in the problem set's folder.
 
 ```{r "3B__8"}
-# Proceed with check to take a look out regression results.
+# Proceed with check to look out regression results.
 reg.summary2(reg1, reg2, reg3, reg4, reg5, reg6)
 ```
 
-This table is a summary of all of our regressions conducted in exercise 3. As we have already discussed the results in detail before, this is more a nice overview about all of our previously conducted regressions. We can see that our covariates used in our regression vary regarding different samples and/or other sets of covariates. We can see this if we compare `reg2`, the private seller sample with `reg5`, the bookvalue sample. 
+This table is a summary of all our regressions conducted in exercise 3. As we have already discussed the results in detail before, this is more a nice overview about all our previously conducted regressions. We can see that our covariates used in our regression vary regarding different samples and/or other sets of covariates. We can see this if we compare `reg2`, the private seller sample with `reg5`, the `bookvalue` sample. 
 
-**Task:** The following chunk shows two bar plots illustrating the effect on our dependant variables on `log(biddy1)`. We again manipulate our regression results as `effectplot()` doesn't suport quadratic terms and logarithmed values. The solution is already given to you, just press `check` to proceed. 
+**Task:** The following chunk shows two bar plots illustrating the effect on our dependant variables on `log(biddy1)`. We again manipulate our regression results as `effectplot()` doesn't support quadratic terms and logarithmic values. The solution is already given to you, just press `check` to proceed. 
   
 ```{r "3B__9"}
 # Manipulate our data set and reassign it to a new variable called logdata
@@ -696,12 +696,12 @@ ggplot(fix_car_e, aes(0, effect)) +
 
 Having a look at the error bar, we can easily identify that the projected out fixed effects for `carmodel` vary quite a lot. The error bar illustrates the upper and lower bound of the confidence intervall. The darker a value becomes, the more often it appears to have this value, meaning darker spots are observations, which are lying on top of each other. It is also worth noting that the effect is not weak at all with a median value of $5.418$. 
 
-## Exercise 4 -- Endogeniety
+## Exercise 4 -- Endogeneity
 
-So far, we have seen that all of our regression results were highly significant at the 1 percent significance level. This means there is a $1\%$ probability of rejecting the null hypothesis, given it is actually true. Keep in mind our null hypothesis in this case would be: none of our covariates chosen has a significant effect on the logrithmed winning bid `log(biddy1)`. Our R squared is also respectably high, so we may expect to have found a proper fit explaining the variance in our dependant variable with our covariates chosen.
+So far, we have seen that all our regression results were highly significant at the 1 percent significance level. This means there is a $1\%$ probability of rejecting the null hypothesis, given it is true. Keep in mind our null hypothesis in this case would be: none of our covariates chosen has a significant effect on the logarithmic winning bid `log(biddy1)`. Our R squared is also respectably high, so we may expect to have found a proper fit explaining the variance in our dependant variable with our covariates chosen.
 
-Now, we want to proceed with some robustness checks - in the paper the author also elaborates on the possiblity of a selection bias, due to a tobit regression. This will ensure that the sample is indeed a proper representative population and not some selections of individual listings, which may cause the effects described in the previous exercises. We nevertheless skip this, as the results were positive, which means no selection bias was found by the author and our conclusions are correct. 
-In this exercise we want to put emphasis on various possibilities for endogeniety to occur. For example omitted variables, which is our true focal point for this exercise.
+Now, we want to proceed with some robustness checks - in the paper the author also elaborates on the possibility of a selection bias, due to a tobit regression. This will ensure that the sample is indeed a proper representative population and not some selections of individual listings, which may cause the effects described in the previous exercises. We nevertheless skip this, as the results were positive, which means no selection bias was found by the author and our conclusions are correct. 
+In this exercise, we want to put emphasis on various possibilities for endogeneity to occur. For example, omitted variables, which is our true focal point for this exercise.
 
 Keep in mind, our base model regression looks as follows:
 
@@ -715,10 +715,10 @@ $$fixed\_effects = carmodel + year + week$$
 
 $$clustered\_se = sellername$$
   
-The logarithmed `miles` seem to explain most of our logarithmed price `logp_t`, which is perfectly rationally explained as a vehicle's main purpose are the means of transportation. The `miles` therefore are a perfect proxy for evaluating a car's condition in a sense of how intensively it has been battered already. The more usage the car has experienced in the past, the less utitlity we expect it to yield in the future. Also take in mind, that the maintenance costs of cars rise with the miles on the odometer. For our purpose though, we want to examine the connection between `photos` and `logp_t`, which was strong. Recall that we argued: if a seller provides enough `photos` in his listing to convey the car's actual condition, the apparent information asymmetry - keep in mind a possible buyer most likely doesn't have the opportunity to inspect the car pre-bidding - should disappear.
-This strong relationship  between `photos` and `log(biddy1)` could also be due to an omitted variable - this means, the variable is currently not part of our set of explanatory variables in our regression -  influencing the `photos` posted by the seller. This would be very unfortunate, yet there are many scenarios to think of. The author for example argues, that the amount of `photos` posted could vary widely across the participation. And indeed, it is a valid assumption to think that bidders will upload more `photos`, if there is more competition. If nobody is interested in the listing anyways, why would he put additional effort in uploading more photos. To tackle this problem, we take the same regression, yet we add another covariate, the number of bidders `n` to control for the latter scenario.
+The logarithmic `miles` seem to explain most of our logarithmic price `logp_t`, which is perfectly rationally explained as a vehicle's main purpose are the means of transportation. The `miles` therefore are a perfect proxy for evaluating a car's condition in a sense of how intensively it has been battered already. The more usage the car has experienced in the past, the less utility we expect it to yield in the future. Also, take in mind, that the maintenance costs of cars rise with the miles on the odometer. For our purpose, though, we want to examine the connection between `photos` and `logp_t`, which was strong. Recall that we argued: if a seller provides enough `photos` in his listing to convey the car's actual condition, the apparent information asymmetry - keep in mind a possible buyer most likely doesn't have the opportunity to inspect the car pre-bidding - should disappear.
+This strong relationship between `photos` and `log(biddy1)` could also be due to an omitted variable - this means, the variable is currently not part of our set of explanatory variables in our regression -  influencing the `photos` posted by the seller. This would be very unfortunate, yet there are many scenarios to think of. The author for example argues, that the amount of `photos` posted could vary widely across the participation. And indeed, it is a valid assumption to think that bidders will upload more `photos`, if there is more competition. If nobody is interested in the listing anyways, why would he put additional effort in uploading more photos. To tackle this problem, we take the same regression, yet we add another covariate, the number of bidders `n` to control for the latter scenario.
 
-As previously, we have to load our dataset `cleanedebay.TXT` first, to work on the data.
+As previously, we must load our dataset `cleanedebay.TXT` first, to work on the data.
 
 **Task:** The following chunk of code resembles the `readRDS()` statement from exercise 1 and is already given. Please proceed with `edit` and immediately `check` afterwards to solve the next task.
 
@@ -729,7 +729,7 @@ data = readRDS("cleanedebay.Rds")
 **Task:** The following regression extends our base model from exercise 3 to include a control variable for the number of total bidders `n`. Press `check` to proceed.
 
 ```{r "4__2"}
-# Proceed with check to take a look out regression results
+# Proceed with check to look out regression results
 regb <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week + n | 0 | sellername, data = data)
 
 # Show regression results
@@ -738,7 +738,7 @@ summary(regb)
 
 We may conclude, that even after controlling for the overall participation of bidders, the provided `photos` have a strong effect on the winning bid `biddy1`. This supports the thesis, that the amount of `photos` posted does not depend on the overall participation of bidders.
 
-Another possiblity would be, that possible bidders prefer dealers to private sellers. As dealers have lower disclosure costs, they may put up more `photos` at the same price. Thus the link between the winning bid `biddy1` and `photos` could be biased, if possible buyers prefer dealers. To gain more information regarding this scenario, we subset our data to a professional dealers only sample and introduce a fixed effect for each dealer. 
+Another possibility would be, that possible bidders prefer dealers to private sellers. As dealers have lower disclosure costs, they may put up more `photos` at the same price. Thus, the link between the winning bid `biddy1` and `photos` could be biased, if possible buyers prefer dealers. To gain more information regarding this scenario, we subset our data to a professional dealer only sample and introduce a fixed effect for each dealer. 
 
 To make this more interesting, this time I'll provide you with the results of the regression, before we perform it. You may want to test yourself with the following quiz:
 
@@ -782,12 +782,12 @@ tr:nth-child(even) {
 #! addon__quiz__Understanding regression results 3
 
 
-The results will reveal support towards the fact, that the strong and significant relation between `photos` and `log(biddy1)` persists, even after controlling for the upper scenario. Thus sellers seem to vary the amount of `photos` provided with each car. This also implies, that sellers are very specific concerning their `photos` and do not tend to upload just a sheer amounts of `photos` arbitrarily.
+The results will reveal support towards the fact, that the strong and significant relation between `photos` and `log(biddy1)` persists, even after controlling for the upper scenario. Thus, sellers seem to vary the amount of `photos` provided with each car. This also implies, that sellers are very specific concerning their `photos` and do not tend to upload just a sheer amount of `photos` arbitrarily.
 
 **Task:** The code is already given to you. All you need to do is to proceed with `check`. 
 
 ```{r "4__3"}
-# Proceed with check to take a look out regression results
+# Proceed with check to look out regression results
 regc <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week + sellername | 0 | sellername, data = data, subset = c(dealer == 1))
 
 # Show regression results
@@ -798,7 +798,7 @@ summary(regc)
 
 
 
-**Task:** This task is optional and completely up to you. In statistics there is no such thing as the only one 'solution' - as long as your model fits the data and given there is some econometric reasoning to support your thesis, it makes perfect sense to introduce another set of covariates. If you want to try other versions of our previous regressions, feel free to perform a regression to your liking and test it.
+**Task:** This task is optional and completely up to you. In statistics, there is no such thing as the only one 'solution' - if your model fits the data and given there is some econometric reasoning to support your thesis, it makes perfect sense to introduce another set of covariates. If you want to try other versions of our previous regressions, feel free to perform a regression to your liking and test it.
 
 ```{r "4__4",optional=TRUE}
 # You may enter your code here
@@ -807,19 +807,19 @@ summary(regc)
 
 ## Exercise 5 -- Online Disclosure and its Costs
 
-In this exercise we want to shift emphasis on the follwoing question: how does the amount of online disclosure relate to its cost. By now we know that disclosure is an important factor with regards to receiving a higher winning bid. This is expected to be each sellers ultimate joint goal. All of our results are in line with our disclosure model: it's always best to disclose as much information as possible to raise returns on auctions. Yet disclosing information may also be expensive and probably not as worthwhile, as each listing has a fee attached to create it. Furthermore there also costs involved to set up the listing. Dealers have a clear advantage, as they mostly utilize a ready-to-use template. Hence setting up new auctions becomes easy. Templates require very little adjustments concerning individual car specific features only. 
-Private sellers on the other hand are most likely expected to sell a single car and not more, as for them it is a one time event, not to occur twice within the next years. Thus those sellers should have quite high costs related to online disclosure, as they are most likely neither familiar with the business, nor familiar with setting up listings; and for certain won't be using any listing `software` like "carad", "auction123" or "eBizAutos". This circumstance makes it very difficult to observe their behavior, respectively to assess their disclosure costs. Thus we again restrict our data set to professional dealers only. Keep in mind by the paper's definition a dealer is a seller, who sold more than one car. Dealers therefore have an incentive to use professional listing `software`, as this will lower their listing costs considerably, rendering the high initial costs to set everything up negligibly small.
+In this exercise, we want to shift emphasis on the following question: how does the amount of online disclosure relate to its cost. By now we know that disclosure is an important factor with regards to receiving a higher winning bid. This is expected to be each seller's ultimate joint goal. All our results are in line with our disclosure model: it's always best to disclose as much information as possible to raise returns on auctions. Yet disclosing information may also be expensive and probably not as worthwhile, as each listing has a fee attached to create it. Furthermore, there also costs involved to set up the listing. Dealers have a clear advantage, as they mostly utilize a ready-to-use template. Hence setting up new auctions becomes easy. Templates require very little adjustments concerning individual car specific features only. 
+Private sellers on the other hand are most likely expected to sell a single car and not more, as for them it is a onetime event, not to occur twice within the next years. Thus, those sellers should have quite high costs related to online disclosure, as they are most likely neither familiar with the business, nor familiar with setting up listings; and for certain won't be using any listing `software` like "carad", "auction123" or "eBizAutos". This circumstance makes it very difficult to observe their behaviour, respectively to assess their disclosure costs. Thus, we again restrict our data set to professional dealers only. Keep in mind by the paper's definition a dealer is a seller, who sold more than one car. Dealers therefore have an incentive to use professional listing `software`, as this will lower their listing costs considerably, rendering the high initial costs to set everything up negligibly small.
 
 In regards to this exercise, we are interested in the following questions:
 
 - Do dealers, who switch to professional listing `software` put up significantly more `photos` than previously?
-- Do disclosure costs influence our level of disclosure signficantly?
+- Do disclosure costs influence our level of disclosure significantly?
 
-To approach the first question, we are leaving our base model for a moment: with the help of our previously gained knowledge about regressions, we will perform a new regression model; this time using `photos` as independant variable and our `software` as additional covariate. Most of the other former covariates will stay on the right-hand side. To make this more interesting and in view of the plethora of regressions we've already conducted, you will do part A of this exercise on your own. In part B on the other hand, I'm going to lead you through the whole exercise, explaining iv regression and the reasoning behind in an rather easy and convenient way with the help of path models.
+To approach the first question, we are leaving our base model for a moment: with the help of our previously gained knowledge about regressions, we will perform a new regression model; this time using `photos` as independent variable and our `software` as additional covariate. Most of the other former covariates will stay on the right-hand side. To make this more interesting and in view of the plethora of regressions we've already conducted, you will do part A of this exercise on your own. In part B on the other hand, I'm going to lead you through the whole exercise, explaining iv regression and the reasoning behind in a rather easy and convenient way with the help of path models.
 
 ## Exercise 5A -- Linear Fixed Effects Regression with IV
 
-The tasks of this exercise are meant to be challenging, but not insoluble. If however, you appear to be unable to proceed - or you're having problems even though you are certain you entered the right solution - just resort to the `solution` button. Nevertheless, I highly encourage you to try everything yourself and always refer to the hints first. 
+The tasks of this exercise are meant to be challenging, but not insoluble. If, however, you appear to be unable to proceed - or you're having problems even though you are certain you entered the right solution - just resort to the `solution` button. Nevertheless, I highly encourage you to try everything yourself and always refer to the hints first. 
 
 We want to conduct a regression as follows:
 
@@ -831,7 +831,7 @@ $$\textrm{Clustered standard errors by seller}$$
 
 #! addon__quiz__Estimating our regression results 2
 
-Your assumptions were correct: A seller with a high feedback puts up significantly more `photos` and the relationship between `software` and `photos` is significant and postive. We will elaborate on both statements at later stages. Please keep in mind, that the level of difficulty will grow with the tasks. Yet all tasks should already be familiar to you, such that you can directly proceed with the next task.
+Your assumptions were correct: A seller with a high feedback puts up significantly more `photos` and the relationship between `software` and `photos` is significant and positive. We will elaborate on both statements at later stages. Please keep in mind, that the level of difficulty will grow with the tasks. Yet all tasks should already be familiar to you, such that you can directly proceed with the next task.
 
 **Task:** Utilizing a call to the function `readRDS()`, load the dataset `cleanedebay.Rds` and assign the result to a variable called `data`.
 
@@ -839,13 +839,13 @@ Your assumptions were correct: A seller with a high feedback puts up significant
 data = readRDS("cleanedebay.Rds")
 ```
 
-**Task:** Using a call to the function `select()` to drop all columns except those contained in our regression model aswell as `dealer` and the number of bidders `n`. If you are uncertain which variables you might have to use, you may always use `glimpse()` to have a precise view at each individual varaible in your dataset `data`. Reassign the result to the variable `dat`. When you are done, please proceed with `check`.
+**Task:** Using a call to the function `select()` to drop all columns except those contained in our regression model as well as `dealer` and the number of bidders `n`. If you are uncertain which variables you might have to use, you may always use `glimpse()` to have a precise view at each individual variable in your dataset `data`. Reassign the result to the variable `dat`. When you are done, please proceed with `check`.
 
 ```{r "5A__2"}
 # Enter your code below
 ```
 
-The variable `dat` is now a `data.frame()` with $106,559$ auctions and $12$ columns. All of our columns are somehow part of our regression, if you do not know how to apply them, you may always have a look at the regression we want to conduct. This should be quite telling.
+The variable `dat` is now a `data.frame()` with $106,559$ auctions and $12$ columns. All our columns are somehow part of our regression, if you do not know how to apply them, you may always have a look at the regression we want to conduct. This should be quite telling.
 
 Before the next task, please acquaint yourself with another powerful R base function: `C()`
 
@@ -860,13 +860,13 @@ If you are uncertain which variables you might have to use, you may always use `
 ```
 
 
-**Task:** Using a call to the function `summary()`, show the results of `reg`, so we can start analyzing them. When you are done, please proceed with `check`.
+**Task:** Using a call to the function `summary()`, show the results of `reg`, so we can start analysing them. When you are done, please proceed with `check`.
 
 ```{r "5A__8"}
 # Enter your code below
 ```
 
-Keep in mind, this is the first time we dont have a log-linear regression model. This time we regressed our total of `photos` provided. And indeed the link between `software` and `photos` in the listing seems to be strong. In average, if a dealer changes to a professional listing `software` he uploads up to $10$ additional `photos`. Every other coefficient has the expected sign, as `miles` and a negative feedback lower the overall amount of `photos`. This makes sense: if the car has been worn down already, it is not as worthwhile to provide lots of `photos`, as the `miles` are the strongest link to the winning bid. Thus if a odometer states many miles, the winning bid won't be as high. From a seller's perspective, one would tend to avoid additional costs, neglecting how small they might be. As `photos` are our proxy for disclosing information, we would also expect a positive sign from our seller feedback, as the seller most likely has disclosed as many information as possible in regards to the car's condition in the past, which made him earn those positive feedback.
+Keep in mind, this is the first time we don't have a log-linear regression model. This time we regressed our total of `photos` provided. And indeed, the link between `software` and `photos` in the listing seems to be strong. In average, if a dealer changes to a professional listing `software` he uploads up to $10$ additional `photos`. Every other coefficient has the expected sign, as `miles` and a negative feedback lower the overall amount of `photos`. This makes sense: if the car has been worn down already, it is not as worthwhile to provide lots of `photos`, as the `miles` are the strongest link to the winning bid. Thus, if an odometer states many miles, the winning bid won't be as high. From a seller's perspective, one would tend to avoid additional costs, neglecting how small they might be. As `photos` are our proxy for disclosing information, we would also expect a positive sign from our seller feedback, as the seller most likely has disclosed as many information as possible in regards to the car's condition in the past, which made him earn that positive feedback.
 
 #! addon__quiz__Linear Regression with Categorical Variables
 
@@ -887,42 +887,42 @@ It's easy to spot the difference in using a professional listing `software`, whe
 
 ## Exercise 5B -- OLS and IV 
 
-Now that we've seen a strong positive relationship between `photos` and `software`, we could possibly use `software` as an instrument in our regression. Yet in this circumstance, `software` needs to be uncorrelated with our error term $\epsilon$. There is no certain proof, and even the author states that it is per se not 'testable', if our upgrade in `software` is caused by selection on quality or influence of a nicely looking listing. Yet, to proceed we are going to assume both of the latter conditions are false, which renders `software` as a valid instrument for `photos`.
+Now that we've seen a strong positive relationship between `photos` and `software`, we could possibly use `software` as an instrument in our regression. Yet in this circumstance, `software` needs to be uncorrelated with our error term $\epsilon$. There is no certain proof, and even the author states that it is per se not 'testable', if our upgrade in `software` is caused by selection on quality or influence of a nicely looking listing. Yet, to proceed we are going to assume both latter conditions are false, which renders `software` as a valid instrument for `photos`.
 
-Let's first have a look at the difference between our ols and iv regresssion. Utilizing a path model should help you to understand the relationships between dependant variable and covariates in our regression. There are observed (rose) and unobserved (cyan) variables in our analysis. Solid arrows are causal relations being part of our actual regression model. Dotted arrows on the other hand, are possible causal relations, which could be present, yet we do not have a proxy to observe them in our actual model. 
+Let's first have a look at the difference between our ols and iv regression. Utilizing a path model should help you to understand the relationships between dependant variable and covariates in our regression. There are observed (rose) and unobserved (cyan) variables in our analysis. Solid arrows are causal relations being part of our actual regression model. Dotted arrows on the other hand, are possible causal relations, which could be present, yet we do not have a proxy to observe them in our actual model. 
 
 Let's put our ols regression model in a path model and have a look:
 
 <style>img {max-width: 100%;} </style>  
 <img src="od.svg">
   
-Our ultimate goal is to find support for our disclosure model's thesis: fully dislosing every information maximizes the winning bid. Until now we used `photos` as a proxy for our level of disclosure: if a seller posted significantly more `photos` than others, this should also cause higher bids on his item in return. As our disclosure model suggests, it's always best to disclose everything, to prevent any information asymmetry to occur in the first place. So we basically want to estimate our winning bid `biddy1` with the amount of `photos`, `miles` and other important covariates of interest like `options`, the seller's feedback and so on.
+Our ultimate goal is to find support for our disclosure model's thesis: fully disclosing every information maximizes the winning bid. Until now we used `photos` as a proxy for our level of disclosure: if a seller posted significantly more `photos` than others, this should also cause higher bids on his item in return. As our disclosure model suggests, it's always best to disclose everything, to prevent any information asymmetry to occur in the first place. So, we basically want to estimate our winning bid `biddy1` with the amount of `photos`, `miles` and other important covariates of interest like `options`, the seller's feedback and so on.
 
-If we come back to exercise 4 and concern ourselves with endogeniety, we find many possibilities for endogeniety here aswell. For example, given a car enthusiast, who kept his car in a tidy state compared to others, who would probably care less. As his car is in a splendid condition, it will yield a higher return when sold. Yet the `photos` of the car, the seller provides will most likely go up aswell, as the car lover wants to disclose every information possible and if every detail is in proper state, why not disclose just all of it? This is a problem of endogeniety though, as we expect `photos` to have a positive effect on the winning bid `biddy1`. As a result we cannot clearly distinguish which effect accounts for the shift in price and how strong they actually are, when observed individually. For further understanding I provided a path model for our hypothetical thesis aswell, yet we may never forget, that there are numerous other possible reasons for endogeniety to think of.
+If we come back to exercise 4 and concern ourselves with endogeneity, we find many possibilities for endogeneity here as well. For example, given a car enthusiast, who kept his car in a tidy state compared to others, who would probably care less. As his car is in a splendid condition, it will yield a higher return when sold. Yet the `photos` of the car, the seller provides will most likely go up as well, as the car lover wants to disclose every information possible and if every detail is in proper state, why not disclose just all of it? This is a problem of endogeneity though, as we expect `photos` to have a positive effect on the winning bid `biddy1`. As a result, we cannot clearly distinguish which effect accounts for the shift in price and how strong they actually are, when observed individually. For further understanding I provided a path model for our hypothetical thesis as well, yet we may never forget, that there are numerous other possible reasons for endogeneity to think of.
 
 <center><img src="od_exp.svg"></center>
 
-#! addon__quiz__Understanding endogeniety
+#! addon__quiz__Understanding endogeneity
 
 
-Our objective now, based on the previous paragraph is to find a good instrument for our proxy of online disclosure `photos`. And as we have already shown, `photos` are correlated with the seller's utilized `software`. This means, that the utilized `software` could aswell explain our change in the winning bid `biddy1` and thus amount of `photos` would not play a role as huge as expected in the first place. Aside from that, there could be other covariates, we did not yet account for distorting our inital result and therefore weaken the link between `biddy1` and `photos`. The alternatives are endless, thus we cannot control for everything and even our data is limited. Nevertheless we can discuss what would happen to those variables and think of other possibilites, which would cause a wrong relationship between our variables `biddy1` and `photos`. 
+Our objective now, based on the previous paragraph is to find a good instrument for our proxy of online disclosure `photos`. And as we have already shown, `photos` are correlated with the seller's utilized `software`. This means, that the utilized `software` could as well explain our change in the winning bid `biddy1` and thus amount of `photos` would not play a role as huge as expected in the first place. Aside from that, there could be other covariates, we did not yet account for distorting our initial result and therefore weaken the link between `biddy1` and `photos`. The alternatives are endless; thus, we cannot control for everything and even our data is limited. Nevertheless, we can discuss what would happen to those variables and think of other possibilities, which would cause a wrong relationship between our variables `biddy1` and `photos`. 
 
 #! addon__quiz__Guessing the likelihood of other variables
 
 
-A possible way to tackle such endogeniety problems would be to implement control variables, which we did in a previous exercise by adding the overall amount of bidders `n` as part of the regression. We saw that a higher participation in the auction didn't seem to be the reason for higher bids.
+A possible way to tackle such endogeneity problems would be to implement control variables, which we did in a previous exercise by adding the overall number of bidders `n` as part of the regression. We saw that a higher participation in the auction didn't seem to be the reason for higher bids.
 
-For this exercise we want to stick to `software` as our instrument though. As ols doesn't account for omitted variables it will cause a bias to occur. If `photos` and `software` are positively correlated, our distribution would not be centered around the true population, in fact, an upward bias would occur, as `photos` gets additional power from `software`, since `software` isn't observed. Thus our estimated coefficient will shift upwards.
+For this exercise, we want to stick to `software` as our instrument though. As ols doesn't account for omitted variables it will cause a bias to occur. If `photos` and `software` are positively correlated, our distribution would not be centred around the true population, in fact, an upward bias would occur, as `photos` gets additional power from `software`, since `software` isn't observed. Thus, our estimated coefficient will shift upwards.
 
 To tackle this eventuality, we use `software` as an instrument for `photos`. This will eliminate any variance due to the influence of unobservable variables, as we are estimating a coefficient for `photos` first. The latter statement will only hold, if we have found a good instrument for `photos` though, meaning in our case `software` has indeed significant explanatory power towards `photos` and is uncorrelated with the error term our main regression. Put differently, in our graphic you can see a causal relation between the utilized software to create the listing, while the link between other unobserved factors and `photos` got separated.
 
-To illustrate this, we are going to simplify our path model to the possible endogenous parts. Depicted on the left is the part of our previous ols model, whilst on the right hand sind, the link between `other unobserved factors` and `estimated change in photos` is separated due to iv estimation. 
+To illustrate this, we are going to simplify our path model to the possible endogenous parts. Depicted on the left is the part of our previous ols model, whilst on the right hand side, the link between `other unobserved factors` and `estimated change in photos` is separated due to iv estimation. 
 
 <img src="od_iv2.svg">
 
-To tackle a scenario such as the latter, we introduce a instrumental variable. When one refers to an iv regression, he will first regress the values of our endogenous variable `photos` on our suspected instrument `software`, this is also called first stage least squares, as overall we are going to conduct a two stage least squares estimation instead of a simple ordinary least squares (ols) regression. In the second stage, having already estimated our estimator for `photos`, we will only add the variance of `photos`, as the variance can be explained by our instrument - given `software` is indeed a valid instrument. This will take variation in `software` by seller into account, whilst excluding any other variation due to other excluded variables. Yet this will only not 'back-fire', if our `software` is independant from our winning bid `biddy1`.
+To tackle a scenario such as the latter, we introduce an instrumental variable. When one refers to an iv regression, he will first regress the values of our endogenous variable `photos` on our suspected instrument `software`, this is also called first stage least squares, as overall we are going to conduct a two stage least squares estimation instead of a simple ordinary least squares (ols) regression. In the second stage, having already estimated our estimator for `photos`, we will only add the variance of `photos`, as the variance can be explained by our instrument - given `software` is indeed a valid instrument. This will take variation in `software` by seller into account, whilst excluding any other variation due to other excluded variables. Yet this will only not 'back-fire', if our `software` is independent from our winning bid `biddy1`.
 
-Now, that we discussed our models, let's again summarise, what we are going to do: We want to conduct an 'instrumental variable regression' this time. To be more precise, we are going to use the utilized `software` for creating the listing as an instrument for `photos`, to check for possible endogeniety. So we assume our `software` is correlated with the amount of`photos` but uncorrelated to the winning bid `biddy1` and the error term in our regression. 
+Now, that we discussed our models, let's again summarise, what we are going to do: We want to conduct an 'instrumental variable regression' this time. To be more precise, we are going to use the utilized `software` for creating the listing as an instrument for `photos`, to check for possible endogeneity. So, we assume our `software` is correlated with the amount of `photos` but uncorrelated to the winning bid `biddy1` and the error term in our regression. 
 
 If you want to understand how to implement an iv regression in `felm()` check the info box below, otherwise proceed.
 
@@ -938,7 +938,7 @@ We again have to load our dataset `cleanedebay.TXT`, the task is identical to th
 data = readRDS("cleanedebay.Rds")
 ```
 
-**Task:** Using a call to the function `felm()` perform a linear regression and assign the result to a variable called `ols`. Keep in mind that as we are only observing dealers, we have to add `sellername` to our list of fixed effects to project those out aswell. As the solution is already given to you, please confirm with `check`. 
+**Task:** Using a call to the function `felm()` perform a linear regression and assign the result to a variable called `ols`. Keep in mind that as we are only observing dealers, we must add `sellername` to our list of fixed effects to project those out as well. As the solution is already given to you, please confirm with `check`. 
 
 ```{r "5B__5"}
 ols <- felm(log(biddy1) ~ log(miles) + photos + options + log(sellfdback) + negpct | carmodel + year + week + sellername | 0 | sellername, data = data, subset = c(dealer == 1))
@@ -947,9 +947,9 @@ ols <- felm(log(biddy1) ~ log(miles) + photos + options + log(sellfdback) + negp
 summary(ols)
 ```
 
-As both, the ols regression and the iv regression are closely tied together, we are going to skip the analysis of `ols` at this point in time and first conduct the second regression, before we'll have a look at both regression results in detail.
+As both, the ols regression and the iv regression are closely tied together, we are going to skip the analysis of `ols` now and first conduct the second regression, before we'll have a look at both regression results in detail.
 
-**Task:** Using a call to the function `felm()`, perform a linear regression and assign the result to a variable called `iv`. Keep in mind that as we are only observing dealers, we have to add `sellername` to our list of fixed effects to project those out aswell. In accordance to our regression model, we perform an iv regression on `photos`, utilizing `software` as an instrument and cluster standard errors by `sellername`. As the solution is already given to you, please confirm with `check`.
+**Task:** Using a call to the function `felm()`, perform a linear regression and assign the result to a variable called `iv`. Keep in mind that as we are only observing dealers, we must add `sellername` to our list of fixed effects to project those out as well. In accordance to our regression model, we perform an iv regression on `photos`, utilizing `software` as an instrument and cluster standard errors by `sellername`. As the solution is already given to you, please confirm with `check`.
 
 ```{r "5B__6"}
 iv <- felm(log(biddy1) ~ log(miles) + options + log(sellfdback) + negpct | carmodel + year + week + sellername | (photos ~ software) | sellername, data = data, subset = c(dealer == 1))
@@ -961,15 +961,15 @@ iv <- felm(log(biddy1) ~ log(miles) + options + log(sellfdback) + negpct | carmo
 reg.summary3(ols, iv)
 ```
 
-At first glance, both regression results seem to be yielding almost the same results, yet having a closer look, we see that the feedback a seller gained from previous actions, is not signficant anymore. Indeed only the logarithmed `miles` and `options` seem to play a role in explaining the winning bid `biddy1`. Our goal was to have a look if `software` is an appropiate instrument for `photos`, as we assumed due to our previous results. Yet upon seeing our results, `photos` is only significant, when observing the `ols` regression and insignificant, when observing the `iv` regression. This renders `software` as a weak instrument and supports the thesis, that `software` is not suited to explain `photos`. Which also points to the fact that disclosure costs indeed seem to effect our price.
+At first glance, both regression results seem to be yielding almost the same results, yet having a closer look, we see that the feedback a seller gained from previous actions, is not significant anymore. Indeed, only the logarithmic `miles` and `options` seem to play a role in explaining the winning bid `biddy1`. Our goal was to have a look if `software` is an appropriate instrument for `photos`, as we assumed due to our previous results. Yet upon seeing our results, `photos` is only significant, when observing the `ols` regression and insignificant, when observing the `iv` regression. This renders `software` as a weak instrument and supports the thesis, that `software` is not suited to explain `photos`. Which also points to the fact that disclosure costs indeed seem to affect our price.
 
 ## Exercise 6 -- Text Coefficients 
 
-For this exercise we're are going to focus on another measure of determining online disclosure. The description of the listing itself should also reveal quite a lot of information to a possible buyer. Analogous to the `photos` provided within a selling, the description itself may also be enforced by a contract, which means, to avoid any legal actions taken by a disappointed buyer, a seller also mustn't lie regarding the vehicle's condition. Hence, he basically has two options to choose from, to not disclose any information at all or to disclose everything willingly. The latter being the better option as our disclosure model says we have to disclose everything possible. Yet if the car is in a really bad condition and no person would buy it, the seller could be better off disclosing nothing, which makes it impossible for the buyer to enforce ex post legal actions based on the description alone.
+For this exercise, we're are going to focus on another measure of determining online disclosure. The description of the listing itself should also reveal quite a lot of information to a possible buyer. Analogous to the `photos` provided within a selling, the description itself may also be enforced by a contract, which means, to avoid any legal actions taken by a disappointed buyer, a seller also mustn't lie regarding the vehicle's condition. Hence, he basically has two options to choose from, to not disclose any information at all or to disclose everything willingly. The latter being the better option as our disclosure model says we must disclose everything possible. Yet if the car is in a bad condition and no person would buy it, the seller could be better off disclosing nothing, which makes it impossible for the buyer to enforce ex post legal actions based on the description alone.
 
 We have already seen our groups of text coefficients in the first exercise, so let's take a closer look again:
 
-The data available with the paper was mined from eBay Motors and all necessary text was extracted via pattern matching by the author. The algorithm was looking at which index a variable of interest, in our case `rust`, `scratch` and `dent` appeared. Afterwards within a $50$ words interval before and after the variable was mentioned, the most mentioned words were extracted and used to identify qualifiers like 'many', 'much' and so on. Using this knowledge he categorized each variable in pre-defined groups.
+The data available with the paper was mined from eBay Motors and all necessary text was extracted via pattern matching by the author. The algorithm was looking at which index a variable of interest, in our case `rust`, `scratch` and `dent` appeared. Afterwards within a $50$ words interval before and after the variable was mentioned, the most mentioned words were extracted and used to identify qualifiers like 'many', 'much' and so on. Using this knowledge, he categorized each variable in pre-defined groups.
 
 <head>
 <style>
@@ -1032,7 +1032,7 @@ tr:nth-child(even) {
 #! addon__quiz__Understanding the categorical variable rust_group
 
 
-Even though the second statement is clearly a positively qualified mention, there is no reference regarding any of our variables. So this a 'group = 0' scenario, in which the variable of interested wasn't mentioned at all in the description.  
+Even though the second statement is clearly a positively qualified mention, there is no reference regarding any of our variables. So, this a 'group = 0' scenario, in which the variable of interested wasn't mentioned at all in the description.  
 
 We are going to extend our basic regression model introduced in exercise 3.
 
@@ -1049,9 +1049,9 @@ $$\textrm{Clustered standard errors by seller}$$
 
 
 
-Let's now examine the link between our logarithmed winning bid `log(biddy1)` and our groups. We again clustered all regressions into a single task, respective code chunk, as all of our regressions are very identical and this is just to add some diversity. The statement will create a nice table, like those we have already seen before in other tasks.
+Let's now examine the link between our logarithmic winning bid `log(biddy1)` and our groups. We again clustered all regressions into a single task, respective code chunk, as all our regressions are very identical and this is just to add some diversity. The statement will create a nice table, like those we have already seen before in other tasks.
 
-We again have to load our dataset `cleanedebay.TXT`, the task is identical to the previous ones, the solution is already given to you.
+We again must load our dataset `cleanedebay.TXT`, the task is identical to the previous ones, the solution is already given to you.
 
 **Task:** The following chunk of code resembles the `readRDS()` statement from exercise 1 and is already given. Please proceed with `edit` and immediately `check` afterwards to solve the next task.
 
@@ -1059,7 +1059,7 @@ We again have to load our dataset `cleanedebay.TXT`, the task is identical to th
 data = readRDS("cleanedebay.Rds")
 ```
 
-**Task:** The code below will include the groups in our regressions from exercise 3. The first regression will take the whole sample, the second and third regression will be for private sellers and dealers only and the last regression will also include the bookvalue of the respective cars. Afterwards we have a look at the summary of those regressions and shortly interpret them. As the regressions are basically just extended versions from earlier, the code is already given to you, just proceed with `check`.
+**Task:** The code below will include the groups in our regressions from exercise 3. The first regression will take the whole sample, the second and third regression will be for private sellers and dealers only and the last regression will also include the `bookvalue` of the respective cars. Afterwards we have a look at the summary of those regressions and shortly interpret them. As the regressions are basically just extended versions from earlier, the code is already given to you, just proceed with `check`.
 
 ```{r "6__2"}
 # Please proceed with enter, as the code is already given to you
@@ -1078,19 +1078,19 @@ reg.summary4(regbasemod,
              regbookval)
 ```
 
-Having a look at our results, we may conclude, that the findings are somewhat puzzling. Neither `No dents`, nor `No rust` is signficant over all regressions. Yet `No scratches` is signficant in both our base model and our private seller sample. Remember the base model resembles our full sample. This could be due to private sellers lacking any other sources of information for possible buyers. Imagine a professional seller on the other hand, aside from car-specific information like `photos` and the text in the listing itself to disclose information, there are numerous other possibilities like a webpage, seller reputation, ...
+Having a look at our results, we may conclude, that the findings are somewhat puzzling. Neither `No dents`, nor `No rust` is significant over all regressions. Yet `No scratches` is significant in both our base model and our private seller sample. Remember the base model resembles our full sample. This could be due to private sellers lacking any other sources of information for possible buyers. Imagine a professional seller on the other hand, aside from car-specific information like `photos` and the text in the listing itself to disclose information, there are numerous other possibilities like a webpage, seller reputation, ...
 
-Nevertheless, it is a little bit reassuring, that most of the puzzling coefficients with a supposed 'wrong' sign, for example `No dents` in the private seller sample, are hardly signficant. As we would not expect an abscence of dents to come along with a lower winning bid `log(biddy1)`. Another plus is the decreasing numbers as the condition gets worse. We can easily spot this in the base model. `No rust` is not signficant so we skip this, but from `Few rust` to `Lot of rust` our coefficient decreases from $-0.246$ to $-0.429$, which is absolutely expected as a car in worse condition should be not as valuable.
+Nevertheless, it is a little bit reassuring, that most of the puzzling coefficients with a supposed 'wrong' sign, for example `No dents` in the private seller sample, are hardly significant. As we would not expect an absence of dents to come along with a lower winning bid `log(biddy1)`. Another plus is the decreasing numbers as the condition gets worse. We can easily spot this in the base model. `No rust` is not significant so we skip this, but from `Few rust` to `Lot of rust` our coefficient decreases from $-0.246$ to $-0.429$, which is absolutely expected as a car in worse condition should be not as valuable.
 
 
 ## Exercise 7 -- Conclusion
 
-We were interested in information asymmetries and how they relate to online disclosure in eBay Motor auctions. At our disposal was a data set containing original data mined from ebay Motors, which enabled us to perform various regressions to determine the driver is for our winning bid `biddy1`. Remember, we started with a very select example of Honda Civics and I suggested that there might be a link between the amount of `photos` a seller posted and the highest bid `biddy1` the respective auction achieves. After this brief introduction we calculated some more descriptive statistics and headed to our first regressions. Our so-called basic model was a hedonic regression model, which tried to explain the price according to specific car features. We saw that the amount of `photos` seemed to be indeed a good candidate explaining our variation in the bid amount. Yet as expected the `miles` on the odometer are - and will probably always be - the most driving covariate in all auctions. Afterwards we were looking into the robustness of our findings: possibly there are other candidates who would make good variates aswell, yet our previous results held strong. In a final attempt to explain our price we started to have a look at certain text coefficients in the listing itself. We examined a relation between scratches, rust and dents, yet our results were mostly not signficant and we therefore didn't proceed with a further analysis. 
+We were interested in information asymmetries and how they relate to online disclosure in eBay Motor auctions. At our disposal was a data set containing original data mined from eBay Motors, which enabled us to perform various regressions to determine the driver is for our winning bid `biddy1`. Remember, we started with a very select example of Honda Civics and I suggested that there might be a link between the amount of `photos` a seller posted and the highest bid `biddy1` the respective auction achieves. After this brief introduction, we calculated some more descriptive statistics and headed to our first regressions. Our so-called basic model was a hedonic regression model, which tried to explain the price per specific car features. We saw that the amount of `photos` seemed to be indeed a good candidate explaining our variation in the bid amount. Yet as expected the `miles` on the odometer are - and will probably always be - the most driving covariate in all auctions. Afterwards we were considering the robustness of our findings: possibly there are other candidates who would make good variates as well, yet our previous results held strong. In a final attempt to explain our price we started to have a look at certain text coefficients in the listing itself. We examined a relation between scratches, rust and dents, yet our results were mostly not significant and we therefore didn't proceed with a further analysis. 
 
-We found out that a seller posting a single additional photo expects a higher payoff of roughly $2\%$. As an additonal photo costs US\$ $0.15$, it is highly recommended to disclose as much information as possible to your bidders. The link between `photos` and our winning bid `biddy1` was robust in all our findings and supports our utilized disclosure model from Milgrom, Paul (1981) and Grossmann, S.J. and Hart, O.D. (1980). Also worth noting is, that there are many other works concerning themselves with disclosure of information. For example Jovanovic (1982) also supports the disclosure thesis, as his results support the idea, that even more than the socially optimal amount of information is disclosed - yet his findings are very restricted, as his results do not allow for false statements being made. All in all the level of disclosure seems to play an important role, when considering used-good markets and should always be considered by a seller.
+We found out that a seller posting a single additional photo expects a higher payoff of roughly $2\%$. As an additional photo costs US\$ $0.15$, it is highly recommended to disclose as much information as possible to your bidders. The link between `photos` and our winning bid `biddy1` was robust in all our findings and supports our utilized disclosure model from Milgrom, Paul (1981) and Grossmann, S.J. and Hart, O.D. (1980). Also, worth noting is, that there are many other works concerning themselves with disclosure of information. For example, Jovanovic (1982) also supports the disclosure thesis, as his results support the idea, that even more than the socially optimal amount of information is disclosed - yet his findings are very restricted, as his results do not allow for false statements being made. All in all the level of disclosure seems to play an important role, when considering used-good markets and should always be considered by a seller.
 
 
-**Task:** To show all your achievements, proceed with `edit` and then `check`. Regarding the whole problemset, a total of $10$ awards could be obtained.  
+**Task:** To show all your achievements, proceed with `edit` and then `check`. Regarding the whole problem set, a total of $10$ awards could be obtained.  
 
 ```{r "7",results='asis'}
 awards(as.html = TRUE)
@@ -1135,15 +1135,14 @@ awards(as.html = TRUE)
 - Lewis, Gregory. 2011. "Asymmetric Information, Adverse Selection and Online Disclosure: The Case of eBay Motors: Dataset." American Economic Review. http://www.aeaweb.org/articles.php?doi=10.1257/aer.101.4.1535.
 - Williams, Richard. 2015: "Heteroskedasticity", University of Notre Dame. https://www3.nd.edu/~rwilliam/stats2/l25.pdf
 - Arellano, Manuel. 2004: "Panel Data Econometrics" Oxford. 
+- Wickham, Hadley. (2009). "ggplot2: Elegant Graphics for Data Analysis". Springer. ISBN: 978-0-387-98140-6
 
 
 ## Exercise 9 -- Appendix
 
-**Task:** Support for the assumption, that fixed effects for the variable carmodel are indeed normally distributed as assumed earlier in this problem set. First load the data and perform the regression. Then plot actual distribution and compare. Please proceed with `edit` and immediately `check` afterwards.
+**Task:** Support for the assumption, that fixed effects for the variable `carmodel` are indeed normally distributed as assumed earlier in this problem set. First load the data and perform the regression. Then plot actual distribution and compare. Please proceed with `edit` and immediately `check` afterwards.
 
 ```{r "9"}
-# Probleme fitdistrplus in Rtutor/knitr/markdown?
-
 library(fitdistrplus)
 library(logspline)
 library(lfe)

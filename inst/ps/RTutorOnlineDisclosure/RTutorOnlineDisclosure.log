@@ -18,21 +18,265 @@
 ,
 {"type":["check_chunk"],"time":["2017-03-27 19:22:10"],"user":["Seb"],"umph":[1490635330.8626],"ok":[false],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
 ,
-{"type":["init_ps"],"time":["2017-03-28 22:44:07"],"user":["Seb"],"umph":[1490733847.4735],"ok":[true]}
+{"type":["init_ps"],"time":["2017-03-28 22:46:09"],"user":["Seb"],"umph":[1490733969.1958],"ok":[true]}
 ,
-{"type":["check_chunk"],"time":["2017-03-28 22:44:54"],"user":["Seb"],"umph":[1490733894.8464],"ok":[false],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+{"type":["check_chunk"],"time":["2017-03-28 22:47:00"],"user":["Seb"],"umph":[1490734020.8165],"ok":[true],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
 ,
-{"type":["check_chunk"],"time":["2017-03-28 22:45:01"],"user":["Seb"],"umph":[1490733901.5598],"ok":[false],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+{"type":["check_chunk"],"time":["2017-03-28 22:47:01"],"user":["Seb"],"umph":[1490734021.1993],"ok":[true],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
 ,
-{"type":["check_chunk"],"time":["2017-03-28 22:45:09"],"user":["Seb"],"umph":[1490733909.1327],"ok":[false],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+{"type":["check_chunk"],"time":["2017-03-28 22:47:08"],"user":["Seb"],"umph":[1490734028.0671],"ok":[false],"chunk":[2],"ex":[2],"e.ind":[1],"code":[""],"message":["You have not yet entered all correct commands."]}
 ,
-{"type":["check_chunk"],"time":["2017-03-28 22:45:11"],"user":["Seb"],"umph":[1490733911.1313],"ok":[false],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+{"type":["check_chunk"],"time":["2017-03-28 22:47:10"],"user":["Seb"],"umph":[1490734030.2778],"ok":[true],"chunk":[2],"ex":[2],"e.ind":[0],"code":["# Enter your Code here\nglimpse(data)"],"message":[""]}
 ,
-{"type":["init_ps"],"time":["2017-03-28 22:49:54"],"user":["Seb"],"umph":[1490734194.7742],"ok":[true]}
+{"type":["check_chunk"],"time":["2017-03-28 22:47:32"],"user":["Seb"],"umph":[1490734052.9987],"ok":[true],"chunk":[2],"ex":[2],"e.ind":[0],"code":["# Enter your Code here\nglimpse(data)"],"message":[""]}
 ,
-{"type":["check_chunk"],"time":["2017-03-28 22:50:08"],"user":["Seb"],"umph":[1490734208.3272],"ok":[false],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+{"type":["check_chunk"],"time":["2017-03-28 22:48:07"],"user":["Seb"],"umph":[1490734087.7597],"ok":[false],"chunk":[3],"ex":[2],"e.ind":[1],"code":[""],"message":["You have not yet entered all correct commands."]}
 ,
-{"type":["check_chunk"],"time":["2017-03-28 22:50:10"],"user":["Seb"],"umph":[1490734210.6813],"ok":[false],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+{"type":["check_chunk"],"time":["2017-03-28 22:48:09"],"user":["Seb"],"umph":[1490734089.5184],"ok":[false],"chunk":[3],"ex":[2],"e.ind":[0],"code":["filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\nfilter(data, relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\")\n"],"message":["evaluation error in \n  filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\n  Error in UseMethod(\"filter_\"): no applicable method for 'filter_' applied to an object of class \"function\"\n"]}
 ,
-{"type":["check_chunk"],"time":["2017-03-28 22:50:12"],"user":["Seb"],"umph":[1490734212.5262],"ok":[false],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":["evaluation error in \n  data = readRDS(\"cleanedebay.Rds\")\n  Error in gzfile(file, \"rb\"): cannot open the connection\n"]}
+{"type":["check_chunk"],"time":["2017-03-28 22:48:15"],"user":["Seb"],"umph":[1490734095.4757],"ok":[false],"chunk":[3],"ex":[2],"e.ind":[0],"code":["filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\nfilter(data, relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\")\n"],"message":["evaluation error in \n  filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\n  Error in UseMethod(\"filter_\"): no applicable method for 'filter_' applied to an object of class \"function\"\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 22:48:17"],"user":["Seb"],"umph":[1490734097.1126],"ok":[false],"chunk":[3],"ex":[2],"e.ind":[0],"code":["filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\nfilter(data, relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\")\n"],"message":["evaluation error in \n  filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\n  Error in UseMethod(\"filter_\"): no applicable method for 'filter_' applied to an object of class \"function\"\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 22:48:26"],"user":["Seb"],"umph":[1490734106.6396],"ok":[false],"chunk":[3],"ex":[2],"e.ind":[0],"code":["library(dplyr)\n\nfilter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\nfilter(data, relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\")\n"],"message":["evaluation error in \n  filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\n  Error in UseMethod(\"filter_\"): no applicable method for 'filter_' applied to an object of class \"function\"\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 22:48:30"],"user":["Seb"],"umph":[1490734110.6961],"ok":[false],"chunk":[3],"ex":[2],"e.ind":[0],"code":["filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\nfilter(data, relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\")\n"],"message":["evaluation error in \n  filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\n  Error in UseMethod(\"filter_\"): no applicable method for 'filter_' applied to an object of class \"function\"\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 22:48:55"],"user":["Seb"],"umph":[1490734135.8442],"ok":[false],"chunk":[3],"ex":[2],"e.ind":[0],"code":["filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\nfilter(data, relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\")\n"],"message":["evaluation error in \n  filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\n  Error in UseMethod(\"filter_\"): no applicable method for 'filter_' applied to an object of class \"function\"\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 22:49:01"],"user":["Seb"],"umph":[1490734141.1148],"ok":[false],"chunk":[3],"ex":[2],"e.ind":[0],"code":["filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\nfilter(data, relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\")\n"],"message":["evaluation error in \n  filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\n  Error in UseMethod(\"filter_\"): no applicable method for 'filter_' applied to an object of class \"function\"\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 22:49:05"],"user":["Seb"],"umph":[1490734145.098],"ok":[false],"chunk":[3],"ex":[2],"e.ind":[0],"code":["filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\nfilter(data, relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\")\n"],"message":["evaluation error in \n  filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\n  Error in UseMethod(\"filter_\"): no applicable method for 'filter_' applied to an object of class \"function\"\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 22:49:06"],"user":["Seb"],"umph":[1490734146.712],"ok":[false],"chunk":[3],"ex":[2],"e.ind":[0],"code":["filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\nfilter(data, relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\")\n"],"message":["evaluation error in \n  filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\n  Error in UseMethod(\"filter_\"): no applicable method for 'filter_' applied to an object of class \"function\"\n"]}
+,
+{"type":["init_ps"],"time":["2017-03-28 23:03:03"],"user":["Seb"],"umph":[1490734983.5363],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-28 23:08:09"],"user":["Seb"],"umph":[1490735289.3989],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 23:08:23"],"user":["Seb"],"umph":[1490735303.6827],"ok":[true],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 23:08:28"],"user":["Seb"],"umph":[1490735308.6884],"ok":[true],"chunk":[2],"ex":[2],"e.ind":[0],"code":["# Enter your Code here\nglimpse(data)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-28 23:08:50"],"user":["Seb"],"umph":[1490735330.534],"ok":[true],"chunk":[3],"ex":[2],"e.ind":[0],"code":["filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\nfilter(data, relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\")\n"],"message":[""]}
+,
+{"type":["init_ps"],"time":["2017-03-29 10:05:57"],"user":["Seb"],"umph":[1490774757.738],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-29 11:20:34"],"user":["Seb"],"umph":[1490779234.6321],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-29 11:24:01"],"user":["Seb"],"umph":[1490779441.2577],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-29 11:32:02"],"user":["Seb"],"umph":[1490779922.341],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-29 13:28:19"],"user":["Seb"],"umph":[1490786899.1619],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-29 13:34:58"],"user":["Seb"],"umph":[1490787298.3636],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-29 15:36:39"],"user":["Seb"],"umph":[1490794599.9177],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-29 15:40:08"],"user":["Seb"],"umph":[1490794808.3883],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-29 15:42:59"],"user":["Seb"],"umph":[1490794979.458],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 16:11:00"],"user":["Seb"],"umph":[1490796660.9289],"ok":[true],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 16:11:02"],"user":["Seb"],"umph":[1490796662.9847],"ok":[true],"chunk":[2],"ex":[2],"e.ind":[0],"code":["# Enter your Code here\nglimpse(data)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 16:11:17"],"user":["Seb"],"umph":[1490796677.4187],"ok":[true],"chunk":[3],"ex":[2],"e.ind":[0],"code":["filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\nfilter(data, relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 16:11:21"],"user":["Seb"],"umph":[1490796681.6665],"ok":[true],"chunk":[4],"ex":[2],"e.ind":[0],"code":["# Enter your code here\nselect(data, model, year, biddy1, photos, text, miles, n, age, dent_group, scratch_group, rust_group)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 16:19:33"],"user":["Seb"],"umph":[1490797173.2704],"ok":[true],"chunk":[5],"ex":[2],"e.ind":[0],"code":["# Extend the code below\ndata %>%\n  filter(relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\") %>%\n  select(model, year, biddy1, photos, text, miles, n, age, dent_group, scratch_group, rust_group)\n  data %>%\n    filter(relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\") %>%\n    select(model, year, biddy1, photos, text, miles, n, age, dent_group, scratch_group, rust_group) %>%\n    arrange(-biddy1)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 16:28:03"],"user":["Seb"],"umph":[1490797683.1955],"ok":[true],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 16:28:04"],"user":["Seb"],"umph":[1490797684.8195],"ok":[true],"chunk":[7],"ex":[3],"e.ind":[0],"code":["dat <- select(data, dealer, miles, age, trans, warranty, options, photos, relist, sellfdback, negpct, minbid, posbid, sell, biddy1, rust, rust_negation, scratch, scratch_negation, dent, dent_negation)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 16:28:07"],"user":["Seb"],"umph":[1490797687.6424],"ok":[true],"chunk":[8],"ex":[3],"e.ind":[0],"code":["# Add your code below\nmean(dat$sell, na.rm = TRUE)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 16:34:35"],"user":["Seb"],"umph":[1490798075.5954],"ok":[true],"chunk":[9],"ex":[3],"e.ind":[0],"code":["# Add your code below\nunique(dat$sell)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 16:45:30"],"user":["Seb"],"umph":[1490798730.8796],"ok":[true],"chunk":[10],"ex":[3],"e.ind":[0],"code":["# Proceed with check\ntab.summary(dat)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 16:55:43"],"user":["Seb"],"umph":[1490799343.0648],"ok":[true],"chunk":[11],"ex":[3],"e.ind":[0],"code":["# tab.summary()\ntab.summary(filter(dat, dealer == 0), filter(dat, dealer == 1))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 16:58:06"],"user":["Seb"],"umph":[1490799486.4683],"ok":[true],"chunk":[12],"ex":[3],"e.ind":[0],"code":["dat$mgroup <- cut(dat$miles, \n                  breaks = c(0, 50000, 100000, 150000, 200000, 250000, 300000, 350000, 400000, 450000, Inf), \n                  labels = c(\"[0,50k]\", \"(50k,100k]\", \"(100k,150k]\", \"(150k,200k]\", \"(200k,250k]\", \n                             \"(250k,300k]\", \"(300k,350k]\", \"(350k,400k]\", \"(400k,450k]\", \"(450k,inf)\"),\n                  right = FALSE)\n\ndat$pgroup <- cut(dat$photos, \n                  breaks = c(0, 5, 10, 15, 20, 25, 30, 35, Inf), \n                  labels = c(\"[0,5]\", \"(5,10]\", \"(10,15]\", \"(15,20]\", \"(20,25]\", \"(25,30]\", \"(30,35]\", \"(35,inf)\"),\n                  right = FALSE)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 17:00:32"],"user":["Seb"],"umph":[1490799632.6119],"ok":[true],"chunk":[13],"ex":[3],"e.ind":[0],"code":["library(ggplot2)\n\nggplot(dat, aes(mgroup, log(biddy1))) +\n  geom_bar(aes(fill = as.factor(mgroup)), position = \"dodge\", stat=\"identity\") +\n  labs(title = \"Plotting winning bid on miles\") + \n  labs(x = \"miles\", y = expression(\"log \" * biddy[1])) +\n  theme_bw(base_family = \"Helvetica\") +\n  theme(legend.position = \"none\", axis.text.x = element_text(size  = 10, angle = 45, hjust = 1, vjust = 1)) "],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 17:03:32"],"user":["Seb"],"umph":[1490799812.509],"ok":[false],"chunk":[14],"ex":[3],"e.ind":[0],"code":["ggplot(dat2, aes(pgroup, log(biddy1))) +\n  geom_bar(aes(fill = as.factor(pgroup)), position = \"dodge\", stat=\"identity\") +\n  labs(title = \"Plotting winning bid on photos\") + \n  labs(x = \"photos\", y = expression(\"log \" * biddy[1])) +\n  theme_bw(base_family = \"Helvetica\") +\n  theme(legend.position = \"none\", axis.text.x = element_text(size  = 10, angle = 45, hjust = 1, vjust = 1))  "],"message":["evaluation error in \n  ggplot(dat2, aes(pgroup, log(biddy1))) + geom_bar(aes(fill = as.factor(pgroup)), position = \"dodge\", stat = \"identity\") + labs(title = \"Plotting winning bid on photos\") + labs(x = \"photos\", y = expression(\"log \" * biddy[1])) + theme_bw(base_family = \"Helvetica\") + theme(legend.position = \"none\", axis.text.x = element_text(size = 10, angle = 45, hjust = 1, vjust = 1))\n  Error in ggplot(dat2, aes(pgroup, log(biddy1))): object 'dat2' not found\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 17:03:55"],"user":["Seb"],"umph":[1490799835.3852],"ok":[false],"chunk":[14],"ex":[3],"e.ind":[0],"code":["ggplot(dat2, aes(pgroup, log(biddy1))) +\n  geom_bar(aes(fill = as.factor(pgroup)), position = \"dodge\", stat=\"identity\") +\n  labs(title = \"Plotting winning bid on photos\") + \n  labs(x = \"photos\", y = expression(\"log \" * biddy[1])) +\n  theme_bw(base_family = \"Helvetica\") +\n  theme(legend.position = \"none\", axis.text.x = element_text(size  = 10, angle = 45, hjust = 1, vjust = 1))  "],"message":["evaluation error in \n  ggplot(dat2, aes(pgroup, log(biddy1))) + geom_bar(aes(fill = as.factor(pgroup)), position = \"dodge\", stat = \"identity\") + labs(title = \"Plotting winning bid on photos\") + labs(x = \"photos\", y = expression(\"log \" * biddy[1])) + theme_bw(base_family = \"Helvetica\") + theme(legend.position = \"none\", axis.text.x = element_text(size = 10, angle = 45, hjust = 1, vjust = 1))\n  Error in ggplot(dat2, aes(pgroup, log(biddy1))): object 'dat2' not found\n"]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 17:30:47"],"user":["Seb"],"umph":[1490801447.4219],"ok":[true],"chunk":[15],"ex":[5],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 17:30:48"],"user":["Seb"],"umph":[1490801448.8541],"ok":[true],"chunk":[16],"ex":[5],"e.ind":[0],"code":["# Adapt and uncomment the code below\n#felm(log(biddy1) ~ ..., data = data)\nfelm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback), data = data)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 17:35:50"],"user":["Seb"],"umph":[1490801750.0496],"ok":[true],"chunk":[17],"ex":[5],"e.ind":[0],"code":["logdata <- filter(data, sellfdback >= 0, is.na(photos)==FALSE, is.na(negpct)==FALSE, is.na(biddy1)==FALSE)\nggplot(logdata, aes(miles, felm(log(biddy1)~log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback), data = logdata)$residuals)) + \n  geom_point(aes(color = felm(log(biddy1)~log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback), data = logdata)$residuals)) + \n  labs(title = \"Plotting residuals on miles\") + \n  labs(x = \"miles\", y = expression(\"log \" * biddy[1])) +\n  scale_x_continuous(labels = c(\"0\", \"100k\", \"200k\", \"300k\", \"400k\", \"500k\")) +\n  coord_cartesian(xlim = c(0,450000)) +\n  theme_bw(base_family = \"Avenir\") +\n  theme(legend.position = \"none\", axis.text.x = element_text(size  = 10, angle = 45, hjust = 1, vjust = 1))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 17:39:46"],"user":["Seb"],"umph":[1490801986.8603],"ok":[true],"chunk":[18],"ex":[5],"e.ind":[0],"code":["# Add your code below\n\nrega <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week, data = data)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 17:39:53"],"user":["Seb"],"umph":[1490801993.2286],"ok":[true],"chunk":[19],"ex":[5],"e.ind":[0],"code":["# Proceed with check to take a look out regression results.\nreg1 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week | 0 | sellername, data = data)\n\nse.summary(rega$se, reg1$cse)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 17:49:38"],"user":["Seb"],"umph":[1490802578.7596],"ok":[true],"chunk":[20],"ex":[5],"e.ind":[0],"code":["summary(reg1)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 18:02:20"],"user":["Seb"],"umph":[1490803340.3776],"ok":[true],"chunk":[21],"ex":[6],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 18:02:28"],"user":["Seb"],"umph":[1490803348.4847],"ok":[true],"chunk":[22],"ex":[6],"e.ind":[0],"code":["# Regression for reg1 (full sample)\nreg1 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week | 0 | sellername, data = data)\n# Regression for reg2 (private sellers only sample)\n# ...\n# Regression for reg3 (professional dealers only sample)\n# ...\nreg1 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week | 0 | sellername, data = data)\nreg2 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week | 0 | sellername, data = data, subset = c(dealer==0))\nreg3 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week | 0 | sellername, data = data, subset = c(dealer==1))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 18:02:38"],"user":["Seb"],"umph":[1490803358.6941],"ok":[true],"chunk":[23],"ex":[6],"e.ind":[0],"code":["reg.summary1(reg1, reg2, reg3)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 18:05:18"],"user":["Seb"],"umph":[1490803518.3689],"ok":[true],"chunk":[24],"ex":[6],"e.ind":[0],"code":["library(regtools)\n\n# Manipulate our data set and reassign it to a new variable called logdata\ndata %>%\n  filter(sellfdback >= 0, is.na(photos)==FALSE, is.na(negpct)==FALSE, is.na(biddy1)==FALSE, miles >= 0) %>%\n  mutate(logmiles = log(miles), logsellfdback = log(sellfdback)) -> logdata\n\n# Rerun our regression and omit the quadratic term (photos^2) \nreg1_omit <- felm(log(biddy1) ~ logmiles + photos + options + negpct + logsellfdback | carmodel + year + week | 0 | sellername, data = logdata)\n\n# Plot the effects on log(biddy1)\neffectplot(reg1_omit, ylab = expression(\"Effect on log \" * biddy[1]), xlab = \"Explanatory Variables\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 18:09:51"],"user":["Seb"],"umph":[1490803791.5862],"ok":[true],"chunk":[25],"ex":[6],"e.ind":[0],"code":["reg4 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week | 0 | sellername, data = data, subset = c(collectible==1))\n\n# Show regression results\nsummary(reg4)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 18:14:35"],"user":["Seb"],"umph":[1490804075.234],"ok":[true],"chunk":[26],"ex":[6],"e.ind":[0],"code":["reg5 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) + log(bookvalue) | carmodel + year + week | 0 | sellername, data = data)\n\n# Show regression results\nsummary(reg5)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 18:17:52"],"user":["Seb"],"umph":[1490804272.2049],"ok":[true],"chunk":[27],"ex":[6],"e.ind":[0],"code":["# Add your code below\nreg6 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) + I(age * photos) + warranty + I(warranty * photos) | carmodel + year + week | 0 | sellername, data = data)\n\n# Show regression results\nsummary(reg6)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 18:18:00"],"user":["Seb"],"umph":[1490804280.1052],"ok":[true],"chunk":[28],"ex":[6],"e.ind":[0],"code":["# Proceed with check to take a look out regression results.\nreg.summary2(reg1, reg2, reg3, reg4, reg5, reg6)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 18:28:32"],"user":["Seb"],"umph":[1490804912.1168],"ok":[true],"chunk":[29],"ex":[6],"e.ind":[0],"code":["# Manipulate our data set and reassign it to a new variable called logdata\nlogdata %>%\n  filter(bookvalue >= 0) %>%\n  mutate(logbookvalue = log(bookvalue)) -> logdata\n\n# Rerun our regressions and omit the quadratic term (photos^2) \nreg_private <- felm(log(biddy1) ~ logmiles + photos + options + negpct + logsellfdback | carmodel + year + week | 0 | sellername, data = logdata, subset = c(dealer==0))\nreg_bookval <- felm(log(biddy1) ~ logmiles + photos + options + negpct + logsellfdback + logbookvalue | carmodel + year + week | 0 | sellername, data = logdata)\n\n# Plot the effects on log(biddy1)\neffectplots(reg_private, reg_bookval)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 18:33:40"],"user":["Seb"],"umph":[1490805220.2459],"ok":[true],"chunk":[30],"ex":[6],"e.ind":[0],"code":["# Fixed Effects\nsetDF(getfe(reg5)) %>%\n  group_by(fe) %>%\n  summarise(mean = mean(effect))\n\n# Plot of Fixed effects for the carmodel\nsetDF(getfe(reg5)) %>%\n  filter(fe == \"carmodel\") %>%\n  summarise(mean = mean(effect), sd = sd(effect), upper = 0, lower = 0) %>%\n  mutate(upper = mean+qnorm(0.975)*sd/sqrt(nrow(filter(setDF(getfe(reg5)), fe == \"carmodel\"))), \n         lower = mean-qnorm(0.975)*sd/sqrt(nrow(filter(setDF(getfe(reg5)), fe == \"carmodel\")))) -> fix_car\n\nfix_car_e <- dplyr::select(filter(setDF(getfe(reg5)), fe == \"carmodel\"), effect)\n\nggplot(fix_car_e, aes(0, effect)) + \n  geom_point(aes(color = effect), size = 4, alpha = 1/2) + \n  labs(title = \"Fixed Effects for 'carmodel'\") + \n  labs(x = \"\", y = \"Fixed Effect\") +\n  theme_bw(base_family = \"Avenir\") +\n  geom_errorbar(colour = \"grey\", aes(x=0, ymin = rep(as.numeric(fix_car$lower),52), ymax = rep(as.numeric(fix_car$upper),52)), size = 1, alpha = 0.25)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 18:40:43"],"user":["Seb"],"umph":[1490805643.1751],"ok":[true],"chunk":[31],"ex":[7],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 18:40:46"],"user":["Seb"],"umph":[1490805646.5843],"ok":[true],"chunk":[32],"ex":[7],"e.ind":[0],"code":["# Proceed with check to take a look out regression results\nregb <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week + n | 0 | sellername, data = data)\n\n# Show regression results\nsummary(regb)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 18:48:38"],"user":["Seb"],"umph":[1490806118.6495],"ok":[true],"chunk":[33],"ex":[7],"e.ind":[0],"code":["# Proceed with check to take a look out regression results\nregc <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week + sellername | 0 | sellername, data = data, subset = c(dealer == 1))\n\n# Show regression results\nsummary(regc)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 19:09:35"],"user":["Seb"],"umph":[1490807375.0893],"ok":[true],"chunk":[35],"ex":[9],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 19:09:36"],"user":["Seb"],"umph":[1490807376.7853],"ok":[true],"chunk":[36],"ex":[9],"e.ind":[0],"code":["# Enter your code below\ndat <- select(data, biddy1, photos, software, miles, options, sellfdback, negpct, carmodel, year, week, sellername, dealer, n)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 19:09:40"],"user":["Seb"],"umph":[1490807380.9298],"ok":[true],"chunk":[37],"ex":[9],"e.ind":[0],"code":["# Enter your code below\nreg <- felm(photos ~ C(software, contr.treatment, base = 4) + log(miles) + options + log(sellfdback) + negpct | carmodel + year + week + sellername | 0 | sellername, data = dat, subset = c(dealer == 1 & n > 0))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 19:09:42"],"user":["Seb"],"umph":[1490807382.4673],"ok":[true],"chunk":[38],"ex":[9],"e.ind":[0],"code":["# Enter your code below\nsummary(reg)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 19:09:54"],"user":["Seb"],"umph":[1490807394.7645],"ok":[true],"chunk":[39],"ex":[9],"e.ind":[0],"code":["ggplot(filter(dat, sellfdback >= 0, is.na(photos)==FALSE, is.na(negpct)==FALSE, is.na(biddy1)==FALSE), aes(software, photos)) +\n  geom_bar(aes(fill = as.factor(software)), position = \"dodge\", stat=\"identity\") +\n  labs(title = \"Plotting photos on software\") + \n  labs(x = \"software\", y = \"photos\") +\n  theme_bw(base_family = \"Helvetica\") +\n  theme(legend.position = \"none\", axis.text.x = element_text(size  = 10, angle = 45, hjust = 1, vjust = 1))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 19:42:28"],"user":["Seb"],"umph":[1490809348.7314],"ok":[true],"chunk":[40],"ex":[10],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 19:42:30"],"user":["Seb"],"umph":[1490809350.8464],"ok":[true],"chunk":[41],"ex":[10],"e.ind":[0],"code":["ols <- felm(log(biddy1) ~ log(miles) + photos + options + log(sellfdback) + negpct | carmodel + year + week + sellername | 0 | sellername, data = data, subset = c(dealer == 1))\n\n# Show regression results\nsummary(ols)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 19:42:35"],"user":["Seb"],"umph":[1490809355.1955],"ok":[true],"chunk":[42],"ex":[10],"e.ind":[0],"code":["iv <- felm(log(biddy1) ~ log(miles) + options + log(sellfdback) + negpct | carmodel + year + week + sellername | (photos ~ software) | sellername, data = data, subset = c(dealer == 1))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 19:42:39"],"user":["Seb"],"umph":[1490809359.1111],"ok":[true],"chunk":[43],"ex":[10],"e.ind":[0],"code":["reg.summary3(ols, iv)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 20:06:24"],"user":["Seb"],"umph":[1490810784.7315],"ok":[true],"chunk":[44],"ex":[11],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-29 20:06:36"],"user":["Seb"],"umph":[1490810796.9788],"ok":[true],"chunk":[45],"ex":[11],"e.ind":[0],"code":["# Please proceed with enter, as the code is already given to you\n\nregbasemod <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) + scratch_group + dent_group + rust_group | carmodel + year + week | 0 | sellername, data = data)\n\nregprivate <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) + scratch_group + dent_group + rust_group | carmodel + year + week | 0 | sellername, data = data, subset = c(dealer == 0))\n\nregdealers <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) + scratch_group + dent_group + rust_group | carmodel + year + week | 0 | sellername, data = data, subset = c(dealer == 1))\n\nregbookval <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) + log(bookvalue) + scratch_group + dent_group + rust_group | carmodel + year + week | 0 | sellername, data = data)\n\nreg.summary4(regbasemod, \n             regprivate, \n             regdealers, \n             regbookval)"],"message":[""]}
+,
+{"type":["init_ps"],"time":["2017-03-29 22:13:59"],"user":["Seb"],"umph":[1490818439.9939],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-31 11:34:54"],"user":["Seb"],"umph":[1490952894.5748],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2017-03-31 12:08:53"],"user":["Seb"],"umph":[1490954933.0378],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:09:06"],"user":["Seb"],"umph":[1490954946.0476],"ok":[true],"chunk":[1],"ex":[2],"e.ind":[0],"code":["# Enter your Code below\n\ndata = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:09:11"],"user":["Seb"],"umph":[1490954951.6492],"ok":[true],"chunk":[2],"ex":[2],"e.ind":[0],"code":["# Enter your Code here\nglimpse(data)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:09:19"],"user":["Seb"],"umph":[1490954959.0564],"ok":[true],"chunk":[3],"ex":[2],"e.ind":[0],"code":["filter(data, model == \"Civic\" & is.na(photos) == FALSE & miles >= 30000 & miles <= 35000)\nfilter(data, relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:09:22"],"user":["Seb"],"umph":[1490954962.6349],"ok":[true],"chunk":[4],"ex":[2],"e.ind":[0],"code":["# Enter your code here\nselect(data, model, year, biddy1, photos, text, miles, n, age, dent_group, scratch_group, rust_group)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:09:24"],"user":["Seb"],"umph":[1490954964.7061],"ok":[true],"chunk":[5],"ex":[2],"e.ind":[0],"code":["# Extend the code below\ndata %>%\n  filter(relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\") %>%\n  select(model, year, biddy1, photos, text, miles, n, age, dent_group, scratch_group, rust_group)\n  data %>%\n    filter(relist == 0 & sell == 1 & is.na(photos) == FALSE & year >= 2000 & year <= 2002 & miles >= 30000 & miles <= 35000 & model == \"Civic\") %>%\n    select(model, year, biddy1, photos, text, miles, n, age, dent_group, scratch_group, rust_group) %>%\n    arrange(-biddy1)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:09:31"],"user":["Seb"],"umph":[1490954971.9176],"ok":[true],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:09:33"],"user":["Seb"],"umph":[1490954973.495],"ok":[true],"chunk":[7],"ex":[3],"e.ind":[0],"code":["dat <- select(data, dealer, miles, age, trans, warranty, options, photos, relist, sellfdback, negpct, minbid, posbid, sell, biddy1, rust, rust_negation, scratch, scratch_negation, dent, dent_negation)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:09:36"],"user":["Seb"],"umph":[1490954976.4118],"ok":[true],"chunk":[8],"ex":[3],"e.ind":[0],"code":["# Add your code below\nmean(dat$sell, na.rm = TRUE)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:09:37"],"user":["Seb"],"umph":[1490954977.9797],"ok":[true],"chunk":[9],"ex":[3],"e.ind":[0],"code":["# Add your code below\nunique(dat$sell)"],"message":[""]}
+,
+{"type":["init_ps"],"time":["2017-03-31 12:32:26"],"user":["Seb"],"umph":[1490956346.7388],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:32:36"],"user":["Seb"],"umph":[1490956356.701],"ok":[true],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:32:36"],"user":["Seb"],"umph":[1490956356.8399],"ok":[true],"chunk":[6],"ex":[3],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:32:38"],"user":["Seb"],"umph":[1490956358.0512],"ok":[false],"chunk":[7],"ex":[3],"e.ind":[1],"code":[""],"message":["You have not yet made an assignment to dat."]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:32:43"],"user":["Seb"],"umph":[1490956363.1385],"ok":[true],"chunk":[7],"ex":[3],"e.ind":[0],"code":["dat <- select(data, dealer, miles, age, trans, warranty, options, photos, relist, sellfdback, negpct, minbid, posbid, sell, biddy1, rust, rust_negation, scratch, scratch_negation, dent, dent_negation)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:32:48"],"user":["Seb"],"umph":[1490956368.0092],"ok":[true],"chunk":[8],"ex":[3],"e.ind":[0],"code":["# Add your code below\nmean(dat$sell, na.rm = TRUE)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:32:49"],"user":["Seb"],"umph":[1490956369.7621],"ok":[true],"chunk":[9],"ex":[3],"e.ind":[0],"code":["# Add your code below\nunique(dat$sell)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:32:57"],"user":["Seb"],"umph":[1490956377.8697],"ok":[true],"chunk":[10],"ex":[3],"e.ind":[0],"code":["# Proceed with check\ntab.summary(dat)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:33:03"],"user":["Seb"],"umph":[1490956383.2747],"ok":[true],"chunk":[11],"ex":[3],"e.ind":[0],"code":["# tab.summary()\ntab.summary(filter(dat, dealer == 0), filter(dat, dealer == 1))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:33:07"],"user":["Seb"],"umph":[1490956387.4561],"ok":[true],"chunk":[12],"ex":[3],"e.ind":[0],"code":["dat$mgroup <- cut(dat$miles, \n                  breaks = c(0, 50000, 100000, 150000, 200000, 250000, 300000, 350000, 400000, 450000, Inf), \n                  labels = c(\"[0,50k]\", \"(50k,100k]\", \"(100k,150k]\", \"(150k,200k]\", \"(200k,250k]\", \n                             \"(250k,300k]\", \"(300k,350k]\", \"(350k,400k]\", \"(400k,450k]\", \"(450k,inf)\"),\n                  right = FALSE)\n\ndat$pgroup <- cut(dat$photos, \n                  breaks = c(0, 5, 10, 15, 20, 25, 30, 35, Inf), \n                  labels = c(\"[0,5]\", \"(5,10]\", \"(10,15]\", \"(15,20]\", \"(20,25]\", \"(25,30]\", \"(30,35]\", \"(35,inf)\"),\n                  right = FALSE)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:33:09"],"user":["Seb"],"umph":[1490956389.5306],"ok":[true],"chunk":[13],"ex":[3],"e.ind":[0],"code":["library(ggplot2)\n\nggplot(dat, aes(mgroup, log(biddy1))) +\n  geom_bar(aes(fill = as.factor(mgroup)), position = \"dodge\", stat=\"identity\") +\n  labs(title = \"Plotting winning bid on miles\") + \n  labs(x = \"miles\", y = expression(\"log \" * biddy[1])) +\n  theme_bw(base_family = \"Helvetica\") +\n  theme(legend.position = \"none\", axis.text.x = element_text(size  = 10, angle = 45, hjust = 1, vjust = 1)) "],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:33:20"],"user":["Seb"],"umph":[1490956400.9177],"ok":[true],"chunk":[14],"ex":[3],"e.ind":[0],"code":["ggplot(dat, aes(pgroup, log(biddy1))) +\n  geom_bar(aes(fill = as.factor(pgroup)), position = \"dodge\", stat=\"identity\") +\n  labs(title = \"Plotting winning bid on photos\") + \n  labs(x = \"photos\", y = expression(\"log \" * biddy[1])) +\n  theme_bw(base_family = \"Helvetica\") +\n  theme(legend.position = \"none\", axis.text.x = element_text(size  = 10, angle = 45, hjust = 1, vjust = 1))  "],"message":[""]}
+,
+{"type":["init_ps"],"time":["2017-03-31 12:36:13"],"user":["Seb"],"umph":[1490956573.6995],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:36:27"],"user":["Seb"],"umph":[1490956587.7594],"ok":[true],"chunk":[15],"ex":[5],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:36:29"],"user":["Seb"],"umph":[1490956589.9467],"ok":[true],"chunk":[16],"ex":[5],"e.ind":[0],"code":["# Adapt and uncomment the code below\n#felm(log(biddy1) ~ ..., data = data)\nfelm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback), data = data)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:36:33"],"user":["Seb"],"umph":[1490956593.756],"ok":[true],"chunk":[17],"ex":[5],"e.ind":[0],"code":["logdata <- filter(data, sellfdback >= 0, is.na(photos)==FALSE, is.na(negpct)==FALSE, is.na(biddy1)==FALSE)\nggplot(logdata, aes(miles, felm(log(biddy1)~log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback), data = logdata)$residuals)) + \n  geom_point(aes(color = felm(log(biddy1)~log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback), data = logdata)$residuals)) + \n  labs(title = \"Plotting residuals on miles\") + \n  labs(x = \"miles\", y = expression(\"log \" * biddy[1])) +\n  scale_x_continuous(labels = c(\"0\", \"100k\", \"200k\", \"300k\", \"400k\", \"500k\")) +\n  coord_cartesian(xlim = c(0,450000)) +\n  theme_bw(base_family = \"Avenir\") +\n  theme(legend.position = \"none\", axis.text.x = element_text(size  = 10, angle = 45, hjust = 1, vjust = 1))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:36:43"],"user":["Seb"],"umph":[1490956603.3668],"ok":[true],"chunk":[18],"ex":[5],"e.ind":[0],"code":["# Add your code below\n\nrega <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week, data = data)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:36:51"],"user":["Seb"],"umph":[1490956611.4389],"ok":[true],"chunk":[19],"ex":[5],"e.ind":[0],"code":["# Proceed with check to look out regression results.\nreg1 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week | 0 | sellername, data = data)\n\nse.summary(rega$se, reg1$cse)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:36:55"],"user":["Seb"],"umph":[1490956615.6913],"ok":[true],"chunk":[20],"ex":[5],"e.ind":[0],"code":["summary(reg1)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:37:02"],"user":["Seb"],"umph":[1490956622.8068],"ok":[true],"chunk":[21],"ex":[6],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:37:10"],"user":["Seb"],"umph":[1490956630.6351],"ok":[true],"chunk":[22],"ex":[6],"e.ind":[0],"code":["# Regression for reg1 (full sample)\nreg1 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week | 0 | sellername, data = data)\n# Regression for reg2 (private sellers only sample)\n# ...\n# Regression for reg3 (professional dealers only sample)\n# ...\nreg1 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week | 0 | sellername, data = data)\nreg2 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week | 0 | sellername, data = data, subset = c(dealer==0))\nreg3 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week | 0 | sellername, data = data, subset = c(dealer==1))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:37:16"],"user":["Seb"],"umph":[1490956636.3462],"ok":[true],"chunk":[23],"ex":[6],"e.ind":[0],"code":["reg.summary1(reg1, reg2, reg3)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:37:21"],"user":["Seb"],"umph":[1490956641.6764],"ok":[true],"chunk":[24],"ex":[6],"e.ind":[0],"code":["library(regtools)\n\n# Manipulate our data set and reassign it to a new variable called logdata\ndata %>%\n  filter(sellfdback >= 0, is.na(photos)==FALSE, is.na(negpct)==FALSE, is.na(biddy1)==FALSE, miles >= 0) %>%\n  mutate(logmiles = log(miles), logsellfdback = log(sellfdback)) -> logdata\n\n# Rerun our regression and omit the quadratic term (photos^2) \nreg1_omit <- felm(log(biddy1) ~ logmiles + photos + options + negpct + logsellfdback | carmodel + year + week | 0 | sellername, data = logdata)\n\n# Plot the effects on log(biddy1)\neffectplot(reg1_omit, ylab = expression(\"Effect on log \" * biddy[1]), xlab = \"Explanatory Variables\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:37:24"],"user":["Seb"],"umph":[1490956644.7731],"ok":[true],"chunk":[25],"ex":[6],"e.ind":[0],"code":["reg4 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week | 0 | sellername, data = data, subset = c(collectible==1))\n\n# Show regression results\nsummary(reg4)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:37:29"],"user":["Seb"],"umph":[1490956649.7436],"ok":[true],"chunk":[26],"ex":[6],"e.ind":[0],"code":["reg5 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) + log(bookvalue) | carmodel + year + week | 0 | sellername, data = data)\n\n# Show regression results\nsummary(reg5)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:37:34"],"user":["Seb"],"umph":[1490956654.7779],"ok":[true],"chunk":[27],"ex":[6],"e.ind":[0],"code":["# Add your code below\nreg6 <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) + I(age * photos) + warranty + I(warranty * photos) | carmodel + year + week | 0 | sellername, data = data)\n\n# Show regression results\nsummary(reg6)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:37:41"],"user":["Seb"],"umph":[1490956661.8041],"ok":[true],"chunk":[28],"ex":[6],"e.ind":[0],"code":["# Proceed with check to look out regression results.\nreg.summary2(reg1, reg2, reg3, reg4, reg5, reg6)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:37:58"],"user":["Seb"],"umph":[1490956678.9954],"ok":[true],"chunk":[29],"ex":[6],"e.ind":[0],"code":["# Manipulate our data set and reassign it to a new variable called logdata\nlogdata %>%\n  filter(bookvalue >= 0) %>%\n  mutate(logbookvalue = log(bookvalue)) -> logdata\n\n# Rerun our regressions and omit the quadratic term (photos^2) \nreg_private <- felm(log(biddy1) ~ logmiles + photos + options + negpct + logsellfdback | carmodel + year + week | 0 | sellername, data = logdata, subset = c(dealer==0))\nreg_bookval <- felm(log(biddy1) ~ logmiles + photos + options + negpct + logsellfdback + logbookvalue | carmodel + year + week | 0 | sellername, data = logdata)\n\n# Plot the effects on log(biddy1)\neffectplots(reg_private, reg_bookval)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:38:07"],"user":["Seb"],"umph":[1490956687.1639],"ok":[true],"chunk":[30],"ex":[6],"e.ind":[0],"code":["# Fixed Effects\nsetDF(getfe(reg5)) %>%\n  group_by(fe) %>%\n  summarise(mean = mean(effect))\n\n# Plot of Fixed effects for the carmodel\nsetDF(getfe(reg5)) %>%\n  filter(fe == \"carmodel\") %>%\n  summarise(mean = mean(effect), sd = sd(effect), upper = 0, lower = 0) %>%\n  mutate(upper = mean+qnorm(0.975)*sd/sqrt(nrow(filter(setDF(getfe(reg5)), fe == \"carmodel\"))), \n         lower = mean-qnorm(0.975)*sd/sqrt(nrow(filter(setDF(getfe(reg5)), fe == \"carmodel\")))) -> fix_car\n\nfix_car_e <- dplyr::select(filter(setDF(getfe(reg5)), fe == \"carmodel\"), effect)\n\nggplot(fix_car_e, aes(0, effect)) + \n  geom_point(aes(color = effect), size = 4, alpha = 1/2) + \n  labs(title = \"Fixed Effects for 'carmodel'\") + \n  labs(x = \"\", y = \"Fixed Effect\") +\n  theme_bw(base_family = \"Avenir\") +\n  geom_errorbar(colour = \"grey\", aes(x=0, ymin = rep(as.numeric(fix_car$lower),52), ymax = rep(as.numeric(fix_car$upper),52)), size = 1, alpha = 0.25)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:38:14"],"user":["Seb"],"umph":[1490956694.3454],"ok":[true],"chunk":[31],"ex":[7],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:38:17"],"user":["Seb"],"umph":[1490956697.4989],"ok":[true],"chunk":[32],"ex":[7],"e.ind":[0],"code":["# Proceed with check to look out regression results\nregb <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week + n | 0 | sellername, data = data)\n\n# Show regression results\nsummary(regb)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:38:21"],"user":["Seb"],"umph":[1490956701.8041],"ok":[true],"chunk":[33],"ex":[7],"e.ind":[0],"code":["# Proceed with check to look out regression results\nregc <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) | carmodel + year + week + sellername | 0 | sellername, data = data, subset = c(dealer == 1))\n\n# Show regression results\nsummary(regc)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:38:24"],"user":["Seb"],"umph":[1490956704.3913],"ok":[true],"chunk":[34],"ex":[7],"e.ind":[0],"code":["# You may enter your code here\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:39:01"],"user":["Seb"],"umph":[1490956741.9419],"ok":[true],"chunk":[35],"ex":[9],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:39:03"],"user":["Seb"],"umph":[1490956743.216],"ok":[true],"chunk":[36],"ex":[9],"e.ind":[0],"code":["# Enter your code below\ndat <- select(data, biddy1, photos, software, miles, options, sellfdback, negpct, carmodel, year, week, sellername, dealer, n)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:39:05"],"user":["Seb"],"umph":[1490956745.4995],"ok":[true],"chunk":[37],"ex":[9],"e.ind":[0],"code":["# Enter your code below\nreg <- felm(photos ~ C(software, contr.treatment, base = 4) + log(miles) + options + log(sellfdback) + negpct | carmodel + year + week + sellername | 0 | sellername, data = dat, subset = c(dealer == 1 & n > 0))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:39:11"],"user":["Seb"],"umph":[1490956751.8749],"ok":[true],"chunk":[38],"ex":[9],"e.ind":[0],"code":["# Enter your code below\nsummary(reg)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:39:17"],"user":["Seb"],"umph":[1490956757.4289],"ok":[true],"chunk":[39],"ex":[9],"e.ind":[0],"code":["ggplot(filter(dat, sellfdback >= 0, is.na(photos)==FALSE, is.na(negpct)==FALSE, is.na(biddy1)==FALSE), aes(software, photos)) +\n  geom_bar(aes(fill = as.factor(software)), position = \"dodge\", stat=\"identity\") +\n  labs(title = \"Plotting photos on software\") + \n  labs(x = \"software\", y = \"photos\") +\n  theme_bw(base_family = \"Helvetica\") +\n  theme(legend.position = \"none\", axis.text.x = element_text(size  = 10, angle = 45, hjust = 1, vjust = 1))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:39:31"],"user":["Seb"],"umph":[1490956771.2309],"ok":[true],"chunk":[40],"ex":[10],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:39:34"],"user":["Seb"],"umph":[1490956774.0545],"ok":[true],"chunk":[41],"ex":[10],"e.ind":[0],"code":["ols <- felm(log(biddy1) ~ log(miles) + photos + options + log(sellfdback) + negpct | carmodel + year + week + sellername | 0 | sellername, data = data, subset = c(dealer == 1))\n\n# Show regression results\nsummary(ols)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:39:37"],"user":["Seb"],"umph":[1490956777.702],"ok":[true],"chunk":[42],"ex":[10],"e.ind":[0],"code":["iv <- felm(log(biddy1) ~ log(miles) + options + log(sellfdback) + negpct | carmodel + year + week + sellername | (photos ~ software) | sellername, data = data, subset = c(dealer == 1))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:39:41"],"user":["Seb"],"umph":[1490956781.2465],"ok":[true],"chunk":[43],"ex":[10],"e.ind":[0],"code":["reg.summary3(ols, iv)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:39:50"],"user":["Seb"],"umph":[1490956790.2538],"ok":[true],"chunk":[44],"ex":[11],"e.ind":[0],"code":["data = readRDS(\"cleanedebay.Rds\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2017-03-31 12:40:01"],"user":["Seb"],"umph":[1490956801.5664],"ok":[true],"chunk":[45],"ex":[11],"e.ind":[0],"code":["# Please proceed with enter, as the code is already given to you\n\nregbasemod <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) + scratch_group + dent_group + rust_group | carmodel + year + week | 0 | sellername, data = data)\n\nregprivate <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) + scratch_group + dent_group + rust_group | carmodel + year + week | 0 | sellername, data = data, subset = c(dealer == 0))\n\nregdealers <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) + scratch_group + dent_group + rust_group | carmodel + year + week | 0 | sellername, data = data, subset = c(dealer == 1))\n\nregbookval <- felm(log(biddy1) ~ log(miles) + photos + I(photos^2/100) + options + negpct + log(sellfdback) + log(bookvalue) + scratch_group + dent_group + rust_group | carmodel + year + week | 0 | sellername, data = data)\n\nreg.summary4(regbasemod, \n             regprivate, \n             regdealers, \n             regbookval)"],"message":[""]}
 ,
